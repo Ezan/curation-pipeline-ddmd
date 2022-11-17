@@ -2,3 +2,6 @@ dependencies/
 output/
 .DS_Store
 .idea/
+chromedriver
+ImageMagick-7.0.10/*
+xpdf_tool/*
