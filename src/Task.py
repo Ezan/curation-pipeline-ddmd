@@ -6,6 +6,7 @@ from requests import patch
 
 
 class Task:
+
     def __init__(self, _insert_document_uri, _send_task_uri):
         self.insert_document_uri = _insert_document_uri
         self.send_task_uri = _send_task_uri
@@ -24,10 +25,12 @@ class Task:
         for figure in elems:
             if figure.endswith('.jpg'):
                 subfigures_folder = join(figsplit_output_path, figure[:-4])
-                caption_file_path = join(
-                    figsplit_output_path, '%s.txt' % figure[:-4])
+                caption_file_path = join(figsplit_output_path,
+                                         '%s.txt' % figure[:-4])
                 if exists(caption_file_path):
-                    with open(join(figsplit_output_path, '%s.txt' % figure[:-4]), 'r') as caption_file:
+                    with open(
+                            join(figsplit_output_path, '%s.txt' % figure[:-4]),
+                            'r') as caption_file:
                         caption = caption_file.read()
                 else:
                     caption = 'no caption extracted for this image'

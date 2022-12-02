@@ -10,6 +10,7 @@ from datetime import datetime
 # sample execution:
 # python pipeline_runner.py /Users/juan/Documents/Projects/Curation-Pipeline/src/config.json /Users/juan/Documents/Projects/Curation-Pipeline/input/pipeline_input /Users/juan/Documents/Projects/Curation-UI/dist/images 10
 
+
 def main(argv):
     num_params = len(argv)
     if num_params < 4:
@@ -24,7 +25,7 @@ def main(argv):
 
     with open(CONFIG_PATH, 'r') as f:
         config_settings = json.load(f)
-        pprint(config_settings)
+        print(config_settings)
     if not validate(config_settings):
         print "The configuration file is invalid. Check the README for instructions.\n"
         return
@@ -48,31 +49,48 @@ def main(argv):
 
     number_docs_processed = 0
     pipeline = Pipeline(config_settings)
-    input_documents = listdir(INPUT_PATH)
+    # input_documents = listdir(INPUT_PATH)
+    input_dirs = listdir(INPUT_PATH)
+    input_dirs.remove('.DS_Store')
 
-    log_file_path = join(WEBAPP_DIST_IMAGES_PATH, config_settings['logfilename'])
+    log_file_path = join(WEBAPP_DIST_IMAGES_PATH,
+                         config_settings['logfilename'])
     with open(log_file_path, 'a+') as out:
-        out.write('Batch execution:%s ---------------------\n' % (datetime.now().strftime("%Y-%m-%d %H:%M:%S")))
-        out.write('%d documents found in input folder:\n' % len(input_documents))
+        out.write('Batch execution:%s ---------------------\n' %
+                  (datetime.now().strftime("%Y-%m-%d %H:%M:%S")))
+        out.write('%d documents found in input folder:\n' % len(input_dirs))
 
-    for input_doc in input_documents:
-        if number_docs_processed < MAX_NUMBER_DOCS_PROCESS:
-            input_document_path = join(INPUT_PATH, input_doc)
-            if pipeline.process_file(input_document_path, WEBAPP_DIST_IMAGES_PATH):
-                number_docs_processed += 1
-        else:
-            with open(log_file_path, 'a+') as out:
-                out.write('Finished execution:%s ---------------------\n' % (datetime.now().strftime("%Y-%m-%d %H:%M:%S")))
-                out.write('%d processed\n\n' % len(MAX_NUMBER_DOCS_PROCESS))
-            print "Reached maximum number of documents to process. Stopping execution"
-            return
+    # for input_doc in input_documents:
+    for label in input_dirs:
+        doc_path = join(INPUT_PATH, label)
+        print("Doc path", doc_path)
+        input_documents = listdir(doc_path)
+        for input_doc in input_documents:
+            if number_docs_processed < MAX_NUMBER_DOCS_PROCESS:
+                input_document_path = join(doc_path, input_doc)
+                if pipeline.process_file(input_document_path,
+                                         WEBAPP_DIST_IMAGES_PATH, label):
+                    number_docs_processed += 1
+            else:
+                with open(log_file_path, 'a+') as out:
+                    out.write('Finished execution:%s ---------------------\n' %
+                              (datetime.now().strftime("%Y-%m-%d %H:%M:%S")))
+                    out.write('%d processed\n\n' %
+                              len(MAX_NUMBER_DOCS_PROCESS))
+                print "Reached maximum number of documents to process. Stopping execution"
+                return
 
 
 def validate(config):
-    if "chromedriver_path" not in config or not exists(config["chromedriver_path"]):
+    # if "base_path" not in config or not exists(config["base_path"]):
+    #     print "Could not find the basepath.\n"
+    #     return False
+    if "chromedriver_path" not in config or not exists(
+            config["chromedriver_path"]):
         print "Could not find the chromedriver.\n"
         return False
-    if "xpdf_pdftohtml_path" not in config or not exists(config["xpdf_pdftohtml_path"]):
+    if "xpdf_pdftohtml_path" not in config or not exists(
+            config["xpdf_pdftohtml_path"]):
         print "Could not find the binary pdftohtml from xpdf.\n"
         return False
     if os.name == 'nt' and \

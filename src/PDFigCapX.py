@@ -1,4 +1,3 @@
-
 import json
 import subprocess
 import time
@@ -17,15 +16,17 @@ MAX_WRONG_COUNT = 5
 
 
 class PDFigCapX():
-    def __init__(self, _chrome_drive_path, _xpdf_pdftohtml_path, _imagemagick_convert_path):
+
+    def __init__(self, _chrome_drive_path, _xpdf_pdftohtml_path,
+                 _imagemagick_convert_path):
         self.chrome_driver_path = _chrome_drive_path
         self.xpdf_pdftohtml_path = _xpdf_pdftohtml_path
         self.imagemagick_convert_path = _imagemagick_convert_path
         self.log_file = None
 
     def extract(self, _input_path, _output_path):
-        xpdf_output_path_prefix = join(
-            _output_path, PDF_OUTPUT_FOLDER)  # xpdf_path
+        xpdf_output_path_prefix = join(_output_path,
+                                       PDF_OUTPUT_FOLDER)  #xpdf_path
         log_file_path = join(_output_path, LOG_FILE)
         self.log_file = open(log_file_path, 'w')
 
@@ -35,14 +36,18 @@ class PDFigCapX():
         total_pdf = 0
 
         for pdf in files:
-            if (pdf.endswith('.pdf') or pdf.endswith('.PDF')) and not pdf.startswith('._'):
+            if (pdf.endswith('.pdf')
+                    or pdf.endswith('.PDF')) and not pdf.startswith('._'):
                 total_pdf += 1
                 pdf_path = join(_input_path, pdf)
-                images = renderer.render_pdf(
-                    pdf_path, self.imagemagick_convert_path)
+                images = renderer.render_pdf(pdf_path,
+                                             self.imagemagick_convert_path)
 
-                if self.__convert_pdf_to_html(xpdf_output_path_prefix, pdf, pdf_path):
-                    if self.__process_figures(images, _input_path, pdf, xpdf_output_path_prefix, _output_path):
+                if self.__convert_pdf_to_html(xpdf_output_path_prefix, pdf,
+                                              pdf_path):
+                    if self.__process_figures(images, _input_path, pdf,
+                                              xpdf_output_path_prefix,
+                                              _output_path):
                         success += 1
         self.log_file.close()
         return len(files), total_pdf, success
@@ -72,8 +77,9 @@ class PDFigCapX():
         while flag == 0 and wrong_count < MAX_WRONG_COUNT:
             try:
                 # process content using the ChromeDriver
-                figures, info = figures_captions_list(
-                    _input_path, _pdf, _xpdf_output_path, self.chrome_driver_path)
+                figures, info = figures_captions_list(_input_path, _pdf,
+                                                      _xpdf_output_path,
+                                                      self.chrome_driver_path)
                 flag = 1
             except Exception as e:
                 flag = 0
@@ -84,15 +90,13 @@ class PDFigCapX():
 
             return figures, info, flag
 
-    def __process_figures(self, _images, _input_path, _pdf, _xpdf_output_path, _output_path):
+    def __process_figures(self, _images, _input_path, _pdf, _xpdf_output_path,
+                          _output_path):
         data = {}
-        data[_pdf] = {
-            'figures': [],
-            'pages_annotated': []
-        }
+        data[_pdf] = {'figures': [], 'pages_annotated': []}
 
-        figures, info, flag = self.__extract_figures(
-            _input_path, _pdf, _xpdf_output_path)
+        figures, info, flag = self.__extract_figures(_input_path, _pdf,
+                                                     _xpdf_output_path)
         if flag == 0:  # there was an error in the extraction
             return False
 
@@ -111,55 +115,60 @@ class PDFigCapX():
             order_no = 0
             for bbox in bboxes:
                 order_no = order_no + 1
-                png_ratio = float(rendered_size[1])/info['page_height']
+                png_ratio = float(rendered_size[1]) / info['page_height']
 
                 if len(bbox[1]) > 0:
-                    data[_pdf]['figures'].append(
-                        {
-                            'page': page_no,
-                            'region_bb': bbox[0],
-                            'figure_type': 'Figure',
-                            'page_width': info['page_width'],
-                            'page_height': info['page_height'],
-                            'caption_bb': bbox[1][0],
-                            'caption_text': bbox[1][1]
-                        })
+                    data[_pdf]['figures'].append({
+                        'page':
+                        page_no,
+                        'region_bb':
+                        bbox[0],
+                        'figure_type':
+                        'Figure',
+                        'page_width':
+                        info['page_width'],
+                        'page_height':
+                        info['page_height'],
+                        'caption_bb':
+                        bbox[1][0],
+                        'caption_text':
+                        bbox[1][1]
+                    })
                     caption_output_filepath = join(
                         output_file_path, '%d_%d.txt' % (page_no, order_no))
                     with open(caption_output_filepath, 'w') as capoutput:
                         # print len(bbox[1][1])
                         # print bbox[1][1]
                         # capoutput.write(str(bbox[1][1]))
-                        content = ''.join(bbox[1][1])
-                        # a = re.split(
-                        #     r'.(?=\([a-z]\)|\([A-E]\)|\([a-z],[a-z]\)|\([a-z], [a-z]\)|\. [a-z],)', content)
-                        # for item in a:
-                        #     # to write each item of a list to the file
-                        #     capoutput.write("%s" % item)
-                        # # outfile.write("%s" % item.lower()) # can convert to lowercase while writng to the file if required.
-
-                        #     # if we dont add next line character to the file,all the lines are loading into the same line of a particular figure
-                        #     capoutput.write("\n")
+                        content = u''.join(bbox[1][1]).encode('utf-8').strip()
                         capoutput.write(content)
                 else:
-                    data[_pdf]['figures'].append(
-                        {
-                            'page': page_no,
-                            'region_bb': bbox[0],
-                            'figure_type': 'Figure',
-                            'page_width': info['page_width'],
-                            'page_height': info['page_height'],
-                            'caption_bb': [],
-                            'caption_text': []
-                        })
-                fig_extracted = page_fig.crop([int(bbox[0][0]*png_ratio), int(bbox[0][1]*png_ratio),
-                                               int((bbox[0][0]+bbox[0][2])*png_ratio), int((bbox[0][1]+bbox[0][3])*png_ratio)])
-                fig_filepath = join(
-                    output_file_path, '%d_%d.jpg' % (page_no, order_no))
+                    data[_pdf]['figures'].append({
+                        'page':
+                        page_no,
+                        'region_bb':
+                        bbox[0],
+                        'figure_type':
+                        'Figure',
+                        'page_width':
+                        info['page_width'],
+                        'page_height':
+                        info['page_height'],
+                        'caption_bb': [],
+                        'caption_text': []
+                    })
+                fig_extracted = page_fig.crop([
+                    int(bbox[0][0] * png_ratio),
+                    int(bbox[0][1] * png_ratio),
+                    int((bbox[0][0] + bbox[0][2]) * png_ratio),
+                    int((bbox[0][1] + bbox[0][3]) * png_ratio)
+                ])
+                fig_filepath = join(output_file_path,
+                                    '%d_%d.jpg' % (page_no, order_no))
                 fig_extracted.save(fig_filepath)
 
         # pprint(_data[_pdf])
         json_file = join(output_file_path, '%s.json' % _pdf[:-4])
         with open(json_file, 'w') as outfile:
-            json.dump(data[_pdf], outfile, ensure_ascii=False)
+            json.dump(data[_pdf], outfile, ensure_ascii=True)
         return True

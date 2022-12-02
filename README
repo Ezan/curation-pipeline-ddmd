@@ -38,7 +38,9 @@ cd src
 
 <!-- Xvfb :99 & export DISPLAY=:99 -->
 
-python pipeline_runner.py /Users/eshakya@unomaha.edu/PycharmProjects/curation-pipeline-ddmd/src/config.json /Users/eshakya@unomaha.edu/PycharmProjects/curation-pipeline-ddmd/input /Users/eshakya@unomaha.edu/PycharmProjects/curation-pipeline-ddmd/output 10
+python pipeline_runner.py /Users/eshakya@unomaha.edu/PycharmProjects/curation-pipeline-ddmd/src/config.json /Users/eshakya@unomaha.edu/PycharmProjects/curation-pipeline-ddmd/input/samples /Users/eshakya@unomaha.edu/PycharmProjects/curation-pipeline-ddmd/output 10
+
+python pipeline_runner.py ./config.json ../input ../output 10
 
 Contact
 Juan Trelles Trabucco jtrell2@uic.edu

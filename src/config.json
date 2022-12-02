@@ -1,7 +1,7 @@
 {
-  "chromedriver_path": "../chromedriver",
-  "xpdf_pdftohtml_path": "../xpdf_tool/bin64/pdftohtml",
-  "imagemagick_convert_path": "../ImageMagick-7.0.10/bin/convert",
+  "chromedriver_path": "/Users/eshakya@unomaha.edu/PycharmProjects/curation-pipeline-ddmd/chromedriver",
+  "xpdf_pdftohtml_path": "/Users/eshakya@unomaha.edu/PycharmProjects/curation-pipeline-ddmd/xpdf_tool/bin64/pdftohtml",
+  "imagemagick_convert_path": "/Users/eshakya@unomaha.edu/PycharmProjects/curation-pipeline-ddmd/ImageMagick-7.0.10/bin/convert",
   "figsplit_url": "https://www.eecis.udel.edu/~compbio/FigSplit",
   "insert_document_service_uri": "http://localhost:3020/api/insertFromPipe",
   "send_task_service_uri": "http://localhost:3020/api/sendPipeTask",

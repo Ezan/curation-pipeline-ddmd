@@ -15,11 +15,11 @@ The main code for figure and caption extraction (figures_captions_list)
 import subprocess
 import os
 import numpy as np
-# import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 import sys
 import cv2
 import codecs
-# import matplotlib.patches as patches
+import matplotlib.patches as patches
 import scipy.misc
 import re
 from lxml import etree
@@ -27,18 +27,21 @@ from selenium import webdriver
 from pdf_info import pdf_info
 
 
-
-def figures_captions_list(input_path, pdf, output_path):
-# input: single pdf file
-# output: bounding box list of figures and captions
+def figures_captions_list(input_path, pdf, output_path, chrome_path):
+    # input: single pdf file
+    # output: bounding box list of figures and captions
     pdf_filename = input_path + pdf
     html_file_path = output_path + pdf[:-4]
-# 1. Read pdfs from input folder  (pdf_info)
-    info, html_boxes = pdf_info(html_file_path, pdf)
-#  2.1. graphical content detection
-    cap_box, fig_box, info, table_box, text_box = box_detection(html_file_path, info, html_boxes)
-    pre_figures, cap_regions = fig_cap_matching(cap_box, fig_box, info, table_box, text_box)
-    figures, captions = evaluation(pre_figures, cap_regions, html_file_path, info, html_boxes) # Remove figure_table and figure caption in one box
+    # 1. Read pdfs from input folder  (pdf_info)
+    info, html_boxes = pdf_info(html_file_path, pdf, chrome_path)
+    #  2.1. graphical content detection
+    cap_box, fig_box, info, table_box, text_box = box_detection(
+        html_file_path, info, html_boxes)
+    pre_figures, cap_regions = fig_cap_matching(cap_box, fig_box, info,
+                                                table_box, text_box)
+    figures, captions = evaluation(
+        pre_figures, cap_regions, html_file_path, info,
+        html_boxes)  # Remove figure_table and figure caption in one box
     figures, captions = check_region(info, figures, captions)
     no_of_figures = sum([len(figures[x]) for x in figures])
     no_of_caps = sum([len(cap_box[x]) for x in cap_box])
@@ -86,18 +89,17 @@ def figures_captions_list(input_path, pdf, output_path):
     return figures, info
 
 
-
 def box_detection(html_file_path, info, html_boxes):
     fig_box = {}
     cap_box = {}
     word_box = {}
     cap_no_clue = []
-    table_box={}
+    table_box = {}
     #browser = webdriver.Chrome('/home/pengyuan/Documents/FC_extraction/chromedriver')
 
     for page in sorted(os.listdir(html_file_path)):
         if page.endswith('.png') and page.startswith('page'):
-        
+
             page_no = int(page[4:-4])
             img = cv2.imread(html_file_path + '/' + page)
             # plt.imshow(img)
@@ -125,13 +127,15 @@ def box_detection(html_file_path, info, html_boxes):
             for e in text_elements:
                 text = e[1]
                 #if e.size['width'] > info['row_width']-100:
-                page_word_box.append([max(e[0][0]-info['row_height'], 0)
-                                        , e[0][1]
-                                        , e[0][2]+2*info['row_height'],
-                                     e[0][3]])
-                if text.startswith('Table') or text.startswith('table') or text.startswith('Box'):
+                page_word_box.append([
+                    max(e[0][0] - info['row_height'], 0), e[0][1],
+                    e[0][2] + 2 * info['row_height'], e[0][3]
+                ])
+                if text.startswith('Table') or text.startswith(
+                        'table') or text.startswith('Box'):
                     table_cap_box.append([e[0][0], e[0][1], e[0][2], e[0][3]])
-                if text.startswith('Fig') or text.startswith('fig') or text.startswith('FIG'):
+                if text.startswith('Fig') or text.startswith(
+                        'fig') or text.startswith('FIG'):
                     #print text
                     text_box.append([e[0][0], e[0][1], e[0][2], e[0][3]])
                     cap_no_clue.append(text)
@@ -140,7 +144,7 @@ def box_detection(html_file_path, info, html_boxes):
                     idx1 = text.find('F')
                     idx2 = text.find('i')
                     idx3 = text.find('g')
-                    if idx1>= 0 and idx2>=0 and idx3>= 0 and idx2>idx1 and idx3>idx2:
+                    if idx1 >= 0 and idx2 >= 0 and idx3 >= 0 and idx2 > idx1 and idx3 > idx2:
                         #print text
                         text_box.append([e[0][0], e[0][1], e[0][2], e[0][3]])
                     # rect = patches.Rectangle((e.location['x'] * png_ratio, e.location['y'] * png_ratio),
@@ -150,30 +154,32 @@ def box_detection(html_file_path, info, html_boxes):
                     #                          facecolor='none')
                     # ax.add_patch(rect)
 
-
             cap_box[page] = text_box
             table_box[page] = table_cap_box
             word_box[page] = page_word_box
-        
+
             imgray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-            ret, thresh = cv2.threshold(imgray, 240, 255, cv2.THRESH_BINARY_INV)
+            ret, thresh = cv2.threshold(imgray, 240, 255,
+                                        cv2.THRESH_BINARY_INV)
             kernel = np.ones((5, 5), np.uint8)
             dilation = cv2.dilate(thresh, kernel, iterations=1)
-            contours, hierarchy = cv2.findContours(dilation,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
+            contours, hierarchy = cv2.findContours(dilation, cv2.RETR_TREE,
+                                                   cv2.CHAIN_APPROX_SIMPLE)
             new_thresh = np.zeros(thresh.shape, dtype=np.uint8)
-      
+
             for cnt in contours:
                 bbox = cv2.boundingRect(cnt)
                 p_bbox = [int(float(x) / png_ratio) for x in bbox]
                 box_image = 0
                 for caption_box in text_box:
-                    box_image = box_image + overlap_ratio_based(caption_box, p_bbox)
+                    box_image = box_image + overlap_ratio_based(
+                        caption_box, p_bbox)
                 if box_image < 0.5:
                     cv2.drawContours(new_thresh, [cnt], 0, 255, -1)
 
             contours, hierarchy = cv2.findContours(new_thresh,
-                                                          cv2.RETR_EXTERNAL,
-                                                          cv2.CHAIN_APPROX_SIMPLE)
+                                                   cv2.RETR_EXTERNAL,
+                                                   cv2.CHAIN_APPROX_SIMPLE)
 
             # scipy.misc.imsave('thresh.jpg', thresh)
             potential_bbox = []
@@ -181,8 +187,10 @@ def box_detection(html_file_path, info, html_boxes):
             # ax.imshow(img)
             for cnt in contours:
                 bbox = cv2.boundingRect(cnt)
-                thresh_for_figure = info['row_height'] * png_ratio*1.5#/ 2  modified on 0318
-                if bbox[3] > thresh_for_figure and bbox[2] > thresh_for_figure:  # Important to set, FIg threshold
+                thresh_for_figure = info[
+                    'row_height'] * png_ratio * 1.5  #/ 2  modified on 0318
+                if bbox[3] > thresh_for_figure and bbox[
+                        2] > thresh_for_figure:  # Important to set, FIg threshold
 
                     p_bbox = [int(float(x) / png_ratio) for x in bbox]
                     # Format checking, to filter box that at top, down, left or right
@@ -190,8 +198,9 @@ def box_detection(html_file_path, info, html_boxes):
                     ol_right = overlap_ratio_based(p_bbox, info['right_bbox'])
                     # Add filter for first page top sign 0110
                     if page == 'page1.png':
-                        ol_top = overlap_ratio_based(p_bbox, [0, 0, info['page_width'],
-                                                              info['page_height'] / 4])  # First page box
+                        ol_top = overlap_ratio_based(p_bbox, [
+                            0, 0, info['page_width'], info['page_height'] / 4
+                        ])  # First page box
                     else:
                         ol_top = overlap_ratio_based(p_bbox, info['top_bbox'])
 
@@ -211,45 +220,52 @@ def box_detection(html_file_path, info, html_boxes):
             if len(potential_bbox) > 1:
                 obj_heights = np.array(potential_bbox)[:, 3]
                 no_of_all = len(obj_heights)
-                no_of_small = len([1 for obj_height in obj_heights if obj_height < 13 and obj_height > 4])
+                no_of_small = len([
+                    1 for obj_height in obj_heights
+                    if obj_height < 13 and obj_height > 4
+                ])
                 small_percent = float(no_of_small) / no_of_all
                 if no_of_all > 300 and small_percent > 0.8:
                     info['mess_up'] = True
 
             count = 0
 
-            if info['mess_up'] == False:# Need to set carefully
-                while count < len(potential_bbox):# ###Need to think about it.....
+            if info['mess_up'] == False:  # Need to set carefully
+                while count < len(
+                        potential_bbox):  # ###Need to think about it.....
                     flag = 0
-                    for each_text_box in page_word_box:# Remove fig box that cross the text box
-                        overlap = overlap_ratio_based(potential_bbox[count], each_text_box)
+                    for each_text_box in page_word_box:  # Remove fig box that cross the text box
+                        overlap = overlap_ratio_based(potential_bbox[count],
+                                                      each_text_box)
                         if overlap > 0.3:
                             flag = 1
                             del potential_bbox[count]
                             break
                     if flag == 0:
-                        count = count +1
+                        count = count + 1
             else:
-                while count < len(potential_bbox):# ###Need to think about it.....
+                while count < len(
+                        potential_bbox):  # ###Need to think about it.....
                     flag = 0
-                    if potential_bbox[count][3]>12:
-                        for each_text_box in page_word_box:# Remove fig box that cross the text box
-                            overlap = overlap_ratio_based(potential_bbox[count], each_text_box)
+                    if potential_bbox[count][3] > 12:
+                        for each_text_box in page_word_box:  # Remove fig box that cross the text box
+                            overlap = overlap_ratio_based(
+                                potential_bbox[count], each_text_box)
                             if overlap > 0.1:
                                 flag = 1
                                 del potential_bbox[count]
                                 break
                         if flag == 0:
-                            count = count +1
+                            count = count + 1
                     else:
                         del potential_bbox[count]
-
 
             fig_box[page] = potential_bbox
 
     info['fig_no_est'] = fig_no_estimation(cap_no_clue)
     info['png_ratio'] = png_ratio
     return cap_box, fig_box, info, table_box, page_word_box
+
 
 def fig_no_estimation(fig_info):
     #print fig_info
@@ -262,6 +278,7 @@ def fig_no_estimation(fig_info):
     #print fig_no
     return fig_no
 
+
 def fig_cap_matching(cap_box, fig_box, info, table_box, text_box):
     # cap_box
     # fig_box
@@ -270,24 +287,29 @@ def fig_cap_matching(cap_box, fig_box, info, table_box, text_box):
     captions = {}
     fig_size_thresh = 30
     for i in range(info['page_no']):
-        page = 'page' + str(i+1) + '.png'
+        page = 'page' + str(i + 1) + '.png'
         table_caps = table_box[page]
 
         p_captions = cap_box[page]
         p_figures = fig_box[page]
-        for table_cap in table_caps:# To remove the table
-            table_cap_box = [table_cap[0], table_cap[1]+table_cap[3], table_cap[2],4*info['row_height']]# Remove the table below
+        for table_cap in table_caps:  # To remove the table
+            table_cap_box = [
+                table_cap[0], table_cap[1] + table_cap[3], table_cap[2],
+                4 * info['row_height']
+            ]  # Remove the table below
             p_figure_id = 0
             while p_figure_id < len(p_figures):
                 p_figure = p_figures[p_figure_id]
 
                 overlap = overlap_ratio_based(table_cap_box, p_figure)
-                if overlap >0.1:
+                if overlap > 0.1:
                     del p_figures[p_figure_id]
                 else:
                     p_figure_id = p_figure_id + 1
-            table_cap_box = [table_cap[0], table_cap[1]-4 * info['row_height'], table_cap[2],
-                             4 * info['row_height']]  # Remove the table below
+            table_cap_box = [
+                table_cap[0], table_cap[1] - 4 * info['row_height'],
+                table_cap[2], 4 * info['row_height']
+            ]  # Remove the table below
             p_figure_id = 0
             while p_figure_id < len(p_figures):
                 p_figure = p_figures[p_figure_id]
@@ -298,17 +320,25 @@ def fig_cap_matching(cap_box, fig_box, info, table_box, text_box):
                 else:
                     p_figure_id = p_figure_id + 1
 
-
-        if len(p_figures) > 0 :
-            if len(p_figures) ==1 and len(p_captions) ==1:
-                if p_figures[0][2] > fig_size_thresh and p_figures[0][3] > fig_size_thresh:# size
-                    if bbox_distance(p_figures[0], p_captions[0]) < 50: # distance
+        if len(p_figures) > 0:
+            if len(p_figures) == 1 and len(p_captions) == 1:
+                if p_figures[0][2] > fig_size_thresh and p_figures[0][
+                        3] > fig_size_thresh:  # size
+                    if bbox_distance(p_figures[0],
+                                     p_captions[0]) < 50:  # distance
                         figures[page] = [[p_figures[0], p_captions[0]]]
-                        captions[page] = [[p_captions[0], [1, 1, info['page_width']-2, info['page_height']-2]]]
+                        captions[page] = [[
+                            p_captions[0],
+                            [
+                                1, 1, info['page_width'] - 2,
+                                info['page_height'] - 2
+                            ]
+                        ]]
                 if page not in figures.keys():
                     cap_regions = caption_regions(p_captions, p_figures, info)
                     captions[page] = cap_regions
-                    figures[page] = label_subfig(info, p_figures, cap_regions, table_box)
+                    figures[page] = label_subfig(info, p_figures, cap_regions,
+                                                 table_box)
 
             else:
                 # sort captions by horizontal
@@ -320,22 +350,34 @@ def fig_cap_matching(cap_box, fig_box, info, table_box, text_box):
                 # For the figures have the same label, compute their bounding
                 #  box
                 captions[page] = cap_regions
-                figures[page] = label_subfig(info, p_figures, cap_regions, table_box)
-            if len(p_captions) == 0:# No caption situation
+                figures[page] = label_subfig(info, p_figures, cap_regions,
+                                             table_box)
+            if len(p_captions) == 0:  # No caption situation
                 sum_area = 0
                 for p_object in p_figures:
                     sum_area = sum_area + p_object[2] * p_object[3]
 
-                page_width =info['page_width']-info['left_bbox'][2]-info['right_bbox'][2]
-                page_height = info['page_height']-info['top_bbox'][3]-info['down_bbox'][3]
-                if float(sum_area)/(page_width*page_height) > 0.2 and i>1:
-                    captions[page] = [[info['down_bbox'], [1, 1, info['page_width']-2, info['page_height']-2]]]
-                    figures[page] = label_subfig(info, p_figures, captions[page], table_box)
+                page_width = info['page_width'] - info['left_bbox'][2] - info[
+                    'right_bbox'][2]
+                page_height = info['page_height'] - info['top_bbox'][3] - info[
+                    'down_bbox'][3]
+                if float(sum_area) / (page_width *
+                                      page_height) > 0.2 and i > 1:
+                    captions[page] = [[
+                        info['down_bbox'],
+                        [
+                            1, 1, info['page_width'] - 2,
+                            info['page_height'] - 2
+                        ]
+                    ]]
+                    figures[page] = label_subfig(info, p_figures,
+                                                 captions[page], table_box)
         else:
             captions[page] = []
             figures[page] = []
 
     return figures, captions
+
 
 def same_no_caps_est(cap_box, fig_box, info, table_box, text_box):
 
@@ -344,7 +386,10 @@ def same_no_caps_est(cap_box, fig_box, info, table_box, text_box):
     for page in cap_box:
         cap_regions[page] = []
         if len(cap_box[page]) == 1:
-            cap_regions[page].append([cap_box[page][0], [0, 0, info['page_width'], info['page_height']]])
+            cap_regions[page].append([
+                cap_box[page][0],
+                [0, 0, info['page_width'], info['page_height']]
+            ])
         if len(cap_box[page]) > 1:
             p_figures = fig_box[page]
             p_captions = cap_box[page]
@@ -361,6 +406,7 @@ def same_no_caps_est(cap_box, fig_box, info, table_box, text_box):
 
     return figures, cap_regions
 
+
 def caption_regions(cap_box, fig_box, info):
     # sort captions by horizontal
     #print cap_box
@@ -370,7 +416,13 @@ def caption_regions(cap_box, fig_box, info):
     columns_point = [1] * column_no
     cap_regions = []
     if len(cap_box) == 1:
-        cap_regions.append([cap_box[0], [1, 1, info['page_width'] - 2*info['row_height'],info['page_height'] - 2*info['row_height']]])
+        cap_regions.append([
+            cap_box[0],
+            [
+                1, 1, info['page_width'] - 2 * info['row_height'],
+                info['page_height'] - 2 * info['row_height']
+            ]
+        ])
         # comment on 0318 for gxd
         '''
         if column_no == 1:
@@ -392,24 +444,38 @@ def caption_regions(cap_box, fig_box, info):
                     cap_regions.append([cap_box[0], [min(cap_box[0][0], columns[0] + info['row_width']+50), cap_box[0][1] + 2 * info['row_height'], columns[0] + info['row_width'],
                                       info['page_height'] - cap_box[0][1] - 3 * info['row_height']]])
         '''
-    elif len(cap_box) >1:
-        if column_no ==1:
+    elif len(cap_box) > 1:
+        if column_no == 1:
             cap_sorted = sorted(cap_box, key=lambda x: x[1])
             for cap_item in cap_sorted:
-                region = [1, columns_point[0], info['page_width']-2, cap_item[1] - columns_point[0]]
+                region = [
+                    1, columns_point[0], info['page_width'] - 2,
+                    cap_item[1] - columns_point[0]
+                ]
                 cap_regions.append([cap_item, region])
-                columns_point[0] = cap_item[1]+cap_item[3]
-            cap_regions.append([cap_item, [1, columns_point[0], info['page_width']-2, info['page_height'] - columns_point[0]]])
+                columns_point[0] = cap_item[1] + cap_item[3]
+            cap_regions.append([
+                cap_item,
+                [
+                    1, columns_point[0], info['page_width'] - 2,
+                    info['page_height'] - columns_point[0]
+                ]
+            ])
         else:
             cap_sorted = sorted(cap_box, key=lambda x: (x[1], x[0]))
             # caption parallel
             for cap_item in cap_sorted:
                 no_cross_fig = 1
-                if cap_item[2] > info['row_width']+50 or (cap_item[0] < info['page_width']/2 and
-                                                                  (cap_item[0]+cap_item[2])>info['page_width']/2):
+                if cap_item[2] > info['row_width'] + 50 or (
+                        cap_item[0] < info['page_width'] / 2 and
+                    (cap_item[0] + cap_item[2]) > info['page_width'] / 2):
                     no_cross_fig = 0
-                    region = [1, max(columns_point), info['page_width']-2, cap_item[1] - max(columns_point)]
-                    columns_point = [cap_item[1]+cap_item[3]] * column_no
+                    region = [
+                        1,
+                        max(columns_point), info['page_width'] - 2,
+                        cap_item[1] - max(columns_point)
+                    ]
+                    columns_point = [cap_item[1] + cap_item[3]] * column_no
                     cap_regions.append([cap_item, region])
                 else:
                     cap_y = cap_item[1]
@@ -428,26 +494,56 @@ def caption_regions(cap_box, fig_box, info):
                     #     region = [1, max(columns_point), info['page_width']-2, cap_y - max(columns_point)]
                     #     columns_point = [cap_item[1] + cap_item[3]] * column_no
                     #
-                    if no_cross_fig== 1:
+                    if no_cross_fig == 1:
                         if cap_x < columns[0] + 100:
-                            region = [cap_x, columns_point[0], info['row_width'], cap_y - columns_point[0]]
+                            region = [
+                                cap_x, columns_point[0], info['row_width'],
+                                cap_y - columns_point[0]
+                            ]
                             columns_point[0] = cap_y + cap_item[3]
-                        elif cap_x < columns[0] + info['row_width'] -100:
-                            region = [1, columns_point[0], columns[0] + info['row_width'], cap_y - columns_point[0]]
+                        elif cap_x < columns[0] + info['row_width'] - 100:
+                            region = [
+                                1, columns_point[0],
+                                columns[0] + info['row_width'],
+                                cap_y - columns_point[0]
+                            ]
                             columns_point[0] = cap_y + cap_item[3]
                         else:
-                            region = [min(cap_x, columns[0] + info['row_width']+50), columns_point[1], info['page_width'] - min(cap_x, columns[0] + info['row_width']+50), cap_y - columns_point[1]]
+                            region = [
+                                min(cap_x,
+                                    columns[0] + info['row_width'] + 50),
+                                columns_point[1], info['page_width'] -
+                                min(cap_x,
+                                    columns[0] + info['row_width'] + 50),
+                                cap_y - columns_point[1]
+                            ]
                             columns_point[1] = cap_y + cap_item[3]
 
                     cap_regions.append([cap_item, region])
             # Added to cover all area, for image below captions
-            if no_cross_fig ==0:
-                region = [1, max(columns_point), info['page_width'] - 2, info['page_height'] - max(columns_point)]
+            if no_cross_fig == 0:
+                region = [
+                    1,
+                    max(columns_point), info['page_width'] - 2,
+                    info['page_height'] - max(columns_point)
+                ]
                 cap_regions.append([cap_item, region])
             else:
-                cap_regions.append([cap_item, [0, columns_point[0], info['page_width']/2, info['page_height']-columns_point[0]-1]])
-                cap_regions.append([cap_item, [info['page_width']/2, columns_point[1], info['page_width'] / 2,
-                                               info['page_height'] - columns_point[1] - 1]])
+                cap_regions.append([
+                    cap_item,
+                    [
+                        0, columns_point[0], info['page_width'] / 2,
+                        info['page_height'] - columns_point[0] - 1
+                    ]
+                ])
+                cap_regions.append([
+                    cap_item,
+                    [
+                        info['page_width'] / 2, columns_point[1],
+                        info['page_width'] / 2,
+                        info['page_height'] - columns_point[1] - 1
+                    ]
+                ])
     return cap_regions
 
 
@@ -465,8 +561,10 @@ def label_subfig(info, figures, cap_regions, table_box):
     for figure in figures:
         for i in range(len(cap_regions)):
             overlap = overlap_ratio_based(figure, cap_regions[i][1])
-            cover = overlap_ratio_based(cap_regions[i][0], figure)# to check if the caption in in the figure
-            if overlap > 0.2 and cover < 0.5:# The overlap need to set carefully
+            cover = overlap_ratio_based(
+                cap_regions[i][0],
+                figure)  # to check if the caption in in the figure
+            if overlap > 0.2 and cover < 0.5:  # The overlap need to set carefully
                 labeled_figures[str(i)].append(figure)
 
         # check distance, to remove far objects
@@ -489,13 +587,13 @@ def label_subfig(info, figures, cap_regions, table_box):
         #    del cap_box[0]
         #    labeled_figures[str(i)]= cap_box
 
-
-
     for i in range(len(cap_regions)):
         if len(labeled_figures[str(i)]) > 0:
             if len(labeled_figures[str(i)]) < 2:
-                if labeled_figures[str(i)][0][2] > 20 and labeled_figures[str(i)][0][2] > 20:# Fig Thresh
-                    fig_merged.append([labeled_figures[str(i)][0], cap_regions[i][0]])
+                if labeled_figures[str(i)][0][2] > 20 and labeled_figures[str(
+                        i)][0][2] > 20:  # Fig Thresh
+                    fig_merged.append(
+                        [labeled_figures[str(i)][0], cap_regions[i][0]])
             else:
                 x0 = []
                 x1 = []
@@ -507,20 +605,27 @@ def label_subfig(info, figures, cap_regions, table_box):
                     y0.append(each_figure[1])
                     x1.append(each_figure[0] + each_figure[2])
                     y1.append(each_figure[1] + each_figure[3])
-                    sum_figure_area = each_figure[2] * each_figure[3] + sum_figure_area
-                new_fig = [min(x0), min(y0), max(x1)-min(x0),
-                                          max(y1)-min(y0)]
+                    sum_figure_area = each_figure[2] * each_figure[
+                        3] + sum_figure_area
+                new_fig = [
+                    min(x0),
+                    min(y0),
+                    max(x1) - min(x0),
+                    max(y1) - min(y0)
+                ]
                 # if new_fig[2] > 2*info['row_height'] and new_fig[3] > 2*info['row_height']:
                 #     fig_merged.append(new_fig)
 
-                if new_fig[2] > 20 and new_fig[3] > 20:# Fig Threshold
+                if new_fig[2] > 20 and new_fig[3] > 20:  # Fig Threshold
                     #Check overlap ratio
-                    overlap_fig = float(sum_figure_area)/(new_fig[2]*new_fig[3])
+                    overlap_fig = float(sum_figure_area) / (new_fig[2] *
+                                                            new_fig[3])
                     if overlap_fig > 0.1:
                         fig_merged.append([new_fig, cap_regions[i][0]])
     # fileter small one
 
     return fig_merged
+
 
 def evaluation(prefigures, cap_regions, html_file_path, info, html_boxes):
 
@@ -532,21 +637,26 @@ def evaluation(prefigures, cap_regions, html_file_path, info, html_boxes):
         captions[page] = []
         for each_figcap in fig_cap_pair[page]:
             new_fig = each_figcap[0]
-            caption_flag = overlap_ratio_based(info['down_bbox'], each_figcap[1])
+            caption_flag = overlap_ratio_based(info['down_bbox'],
+                                               each_figcap[1])
             if caption_flag > 0.8:
                 figcap = each_figcap[0]
                 if info['mess_up'] == False:
                     for each_page_html in html_boxes:
                         if each_page_html[0] == int(page[4:-4]):
                             for element in each_page_html[1]:
-                                in_or_not = overlap_ratio_based(element[0], figcap)
+                                in_or_not = overlap_ratio_based(
+                                    element[0], figcap)
                                 if in_or_not > 0.05:
-                                    new_fig = merge_two_boxes(new_fig, element[0])
+                                    new_fig = merge_two_boxes(
+                                        new_fig, element[0])
 
                             for element in each_page_html[1]:
-                                in_or_not = bbox_distance(element[0], each_figcap[0])
-                                if in_or_not < info['row_height']/4:
-                                    new_fig = merge_two_boxes(new_fig, element[0])
+                                in_or_not = bbox_distance(
+                                    element[0], each_figcap[0])
+                                if in_or_not < info['row_height'] / 4:
+                                    new_fig = merge_two_boxes(
+                                        new_fig, element[0])
                     figures[page].append([new_fig, []])
                     captions[page].append([])
                 else:
@@ -554,13 +664,14 @@ def evaluation(prefigures, cap_regions, html_file_path, info, html_boxes):
                     captions[page].append([])
             else:
 
-                x0 = min(each_figcap[0][0],each_figcap[1][0])
+                x0 = min(each_figcap[0][0], each_figcap[1][0])
                 y0 = min(each_figcap[0][1], each_figcap[1][1])
-                x1 = max(each_figcap[0][0]+each_figcap[0][2], each_figcap[1][0]+each_figcap[1][2])
-                y1 = max(each_figcap[0][1] + each_figcap[0][3], each_figcap[1][1])
-                figcap = [x0, y0, x1-x0, y1-y0]
+                x1 = max(each_figcap[0][0] + each_figcap[0][2],
+                         each_figcap[1][0] + each_figcap[1][2])
+                y1 = max(each_figcap[0][1] + each_figcap[0][3],
+                         each_figcap[1][1])
+                figcap = [x0, y0, x1 - x0, y1 - y0]
                 cap_box = each_figcap[1]
-
 
                 #print fig_cap_pair[page]
                 if info['mess_up'] == False:
@@ -568,59 +679,91 @@ def evaluation(prefigures, cap_regions, html_file_path, info, html_boxes):
                         if each_page_html[0] == int(page[4:-4]):
 
                             for element in each_page_html[1]:
-                                in_or_not = overlap_ratio_based(element[0], figcap)
+                                in_or_not = overlap_ratio_based(
+                                    element[0], figcap)
                                 if in_or_not > 0.05:
-                                    new_fig = merge_two_boxes(new_fig,element[0])
+                                    new_fig = merge_two_boxes(
+                                        new_fig, element[0])
 
                             for element in each_page_html[1]:
-                                in_or_not = bbox_distance(element[0], each_figcap[0])
-                                if in_or_not < info['row_height']/4:
-                                    new_fig = merge_two_boxes(new_fig, element[0])
+                                in_or_not = bbox_distance(
+                                    element[0], each_figcap[0])
+                                if in_or_not < info['row_height'] / 4:
+                                    new_fig = merge_two_boxes(
+                                        new_fig, element[0])
                             # for caption detection ~~~~~~~~~~~~~~~~~~~~~~~~
                             cap_detection_flag = 0
                             cap_text = []
-                            cap_gap = 0.5 * info['row_height']# modify to 0.75 0.5
+                            cap_gap = 0.5 * info[
+                                'row_height']  # modify to 0.75 0.5
                             for element in each_page_html[1]:
-                                if element[0] == cap_box or cap_detection_flag == 1:
+                                if element[
+                                        0] == cap_box or cap_detection_flag == 1:
                                     if element[0] == cap_box:
                                         cap_detection_flag = 1
                                         cap_text.append(element[1])
                                         first_line_box = cap_box
                                         moving_box = cap_box
                                     else:
-                                        cap_gap = max(min(element[0][1]-first_line_box[1]-first_line_box[3], cap_gap), 3)
-                                        current_gap = element[0][1]-moving_box[1]-moving_box[3]
+                                        cap_gap = max(
+                                            min(
+                                                element[0][1] -
+                                                first_line_box[1] -
+                                                first_line_box[3], cap_gap), 3)
+                                        current_gap = element[0][
+                                            1] - moving_box[1] - moving_box[3]
                                         #print current_gap
                                         #print moving_box
                                         #print element[0]
-                                        if current_gap>=max(0.5 * info['row_height'],cap_gap):# 0.75*info['row_height']
+                                        if current_gap >= max(
+                                                0.5 * info['row_height'],
+                                                cap_gap
+                                        ):  # 0.75*info['row_height']
                                             cap_detection_flag = 0
-                                        elif (element[0][2]-first_line_box[2]>5*info['row_height'] or element[0][3] - first_line_box[3]>1) and current_gap-cap_gap>3:
+                                        elif (element[0][2] - first_line_box[2]
+                                              > 5 * info['row_height']
+                                              or element[0][3] -
+                                              first_line_box[3] > 1
+                                              ) and current_gap - cap_gap > 3:
                                             cap_detection_flag = 0
 
-                                        if abs(first_line_box[0]-element[0][0])>10*info['row_height'] and cap_detection_flag == 0:
+                                        if abs(
+                                                first_line_box[0] - element[0]
+                                            [0]) > 10 * info[
+                                                'row_height'] and cap_detection_flag == 0:
                                             cap_detection_flag = 1
-                                        elif abs(first_line_box[0]-element[0][0])>10*info['row_height'] and cap_detection_flag == 1:
+                                        elif abs(
+                                                first_line_box[0] - element[0]
+                                            [0]) > 10 * info[
+                                                'row_height'] and cap_detection_flag == 1:
                                             cap_detection_flag = 1
 
                                         elif cap_detection_flag == 1:
                                             moving_box = element[0]
-                                            cap_box = merge_two_boxes(cap_box, element[0])
+                                            cap_box = merge_two_boxes(
+                                                cap_box, element[0])
                                             cap_text.append(element[1])
-                                            
+
                                     # To determine where to stop
                     # Finding separate captions
-                            if len(cap_text)==1 and (cap_text[0][-1].isdigit() or cap_text[-1][-1].isdigit()) and len(cap_text[0])<15:
+                            if len(cap_text) == 1 and (
+                                    cap_text[0][-1].isdigit()
+                                    or cap_text[-1][-1].isdigit()) and len(
+                                        cap_text[0]) < 15:
                                 cap_detection_flag = 0
                                 cap_text_cp = cap_text
                                 cap_box_cp = cap_box
                                 cap_text = []
-                                cap_gap = 0.5 * info['row_height']  # modify to 0.75 0.5
+                                cap_gap = 0.5 * info[
+                                    'row_height']  # modify to 0.75 0.5
                                 next = 0
                                 for element in each_page_html[1]:
-                                    if element[0] == cap_box or cap_detection_flag == 1:
+                                    if element[
+                                            0] == cap_box or cap_detection_flag == 1:
                                         if next == 0:
-                                            if element[0][1]>cap_box[1] and len(element[1])>30:
+                                            if element[0][1] > cap_box[
+                                                    1] and len(
+                                                        element[1]) > 30:
                                                 next = 1
                                                 cap_detection_flag = 1
                                                 cap_text.append(element[1])
@@ -632,36 +775,59 @@ def evaluation(prefigures, cap_regions, html_file_path, info, html_boxes):
 
                                         else:
                                             cap_gap = max(
-                                                min(element[0][1] - first_line_box[1] - first_line_box[3], cap_gap), 3)
-                                            current_gap = element[0][1] - moving_box[1] - moving_box[3]
+                                                min(
+                                                    element[0][1] -
+                                                    first_line_box[1] -
+                                                    first_line_box[3],
+                                                    cap_gap), 3)
+                                            current_gap = element[0][
+                                                1] - moving_box[
+                                                    1] - moving_box[3]
                                             #print current_gap
                                             #print moving_box
                                             #print element[0]
-                                            if current_gap >= max(0.5 * info['row_height'],cap_gap):  # 0.75*info['row_height']
+                                            if current_gap >= max(
+                                                    0.5 * info['row_height'],
+                                                    cap_gap
+                                            ):  # 0.75*info['row_height']
                                                 cap_detection_flag = 0
-                                            elif (element[0][2] - first_line_box[2] > 5 * info['row_height'] or
-                                                              element[0][3] - first_line_box[3] > 1) and current_gap - cap_gap > 3:
+                                            elif (
+                                                    element[0][2] -
+                                                    first_line_box[2] >
+                                                    5 * info['row_height']
+                                                    or element[0][3] -
+                                                    first_line_box[3] > 1
+                                            ) and current_gap - cap_gap > 3:
                                                 cap_detection_flag = 0
 
-                                            if abs(first_line_box[0] - element[0][0]) > 10 * info[
-                                                'row_height'] and cap_detection_flag == 0:
+                                            if abs(
+                                                    first_line_box[0] -
+                                                    element[0][0]
+                                            ) > 10 * info[
+                                                    'row_height'] and cap_detection_flag == 0:
                                                 cap_detection_flag = 1
-                                            elif abs(first_line_box[0] - element[0][0]) > 10 * info[
-                                                'row_height'] and cap_detection_flag == 1:
+                                            elif abs(
+                                                    first_line_box[0] -
+                                                    element[0][0]
+                                            ) > 10 * info[
+                                                    'row_height'] and cap_detection_flag == 1:
                                                 cap_detection_flag = 1
 
                                             elif cap_detection_flag == 1:
                                                 moving_box = element[0]
-                                                cap_box = merge_two_boxes(cap_box, element[0])
+                                                cap_box = merge_two_boxes(
+                                                    cap_box, element[0])
                                                 cap_text.append(element[1])
-                                                
-                                distance_before = bbox_distance(new_fig, cap_box_cp)
+
+                                distance_before = bbox_distance(
+                                    new_fig, cap_box_cp)
                                 distance_now = bbox_distance(new_fig, cap_box)
                                 # if distance_now > 2*distance_before + 2*cap_box_cp[3]: No distance control is better
                                 #     cap_box = cap_box_cp
                                 #     cap_text = cap_text_cp
 
-                            figures[page].append([new_fig, [cap_box, cap_text]])
+                            figures[page].append(
+                                [new_fig, [cap_box, cap_text]])
 
                             captions[page].append([cap_box, cap_text])
                 else:
@@ -672,36 +838,60 @@ def evaluation(prefigures, cap_regions, html_file_path, info, html_boxes):
                             cap_text = []
                             cap_gap = info['row_height']
                             for element in each_page_html[1]:
-                                if element[0] == cap_box or cap_detection_flag == 1:
+                                if element[
+                                        0] == cap_box or cap_detection_flag == 1:
                                     if element[0] == cap_box:
                                         cap_detection_flag = 1
                                         cap_text.append(element[1])
                                         first_line_box = cap_box
                                         moving_box = cap_box
                                     else:
-                                        cap_gap = max(min(element[0][1]-first_line_box[1]-first_line_box[3], cap_gap), 3)
-                                        current_gap = element[0][1]-moving_box[1]-moving_box[3]
+                                        cap_gap = max(
+                                            min(
+                                                element[0][1] -
+                                                first_line_box[1] -
+                                                first_line_box[3], cap_gap), 3)
+                                        current_gap = element[0][
+                                            1] - moving_box[1] - moving_box[3]
                                         #print current_gap
                                         #print moving_box
                                         #print element[0]
-                                        if current_gap>=max(0.5 * info['row_height'],cap_gap):# 0.75*info['row_height']
+                                        if current_gap >= max(
+                                                0.5 * info['row_height'],
+                                                cap_gap
+                                        ):  # 0.75*info['row_height']
                                             cap_detection_flag = 0
-                                        elif (element[0][2]-first_line_box[2]>5*info['row_height'] or element[0][3] - first_line_box[3]>1) and current_gap-cap_gap>3:
+                                        elif (element[0][2] - first_line_box[2]
+                                              > 5 * info['row_height']
+                                              or element[0][3] -
+                                              first_line_box[3] > 1
+                                              ) and current_gap - cap_gap > 3:
                                             cap_detection_flag = 0
 
-                                        if abs(first_line_box[0]-element[0][0])>10*info['row_height'] and cap_detection_flag == 0:
+                                        if abs(
+                                                first_line_box[0] - element[0]
+                                            [0]) > 10 * info[
+                                                'row_height'] and cap_detection_flag == 0:
                                             cap_detection_flag = 1
-                                        elif abs(first_line_box[0]-element[0][0])>10*info['row_height'] and cap_detection_flag == 1:
+                                        elif abs(
+                                                first_line_box[0] - element[0]
+                                            [0]) > 10 * info[
+                                                'row_height'] and cap_detection_flag == 1:
                                             cap_detection_flag = 1
 
                                         elif cap_detection_flag == 1:
                                             moving_box = element[0]
-                                            cap_box = merge_two_boxes(cap_box, element[0])
+                                            cap_box = merge_two_boxes(
+                                                cap_box, element[0])
                                             cap_text.append(element[1])
-                                            if first_line_box[2]-element[0][2]>5*info['row_height'] and element[1].endswith('.'):
+                                            if first_line_box[2] - element[0][
+                                                    2] > 5 * info[
+                                                        'row_height'] and element[
+                                                            1].endswith('.'):
                                                 cap_detection_flag = 0
                             captions[page].append([cap_box, cap_text])
-                            figures[page].append([each_figcap[0], [cap_box, cap_text]])
+                            figures[page].append(
+                                [each_figcap[0], [cap_box, cap_text]])
 
     #
     # for page in figures:
@@ -729,63 +919,79 @@ def evaluation(prefigures, cap_regions, html_file_path, info, html_boxes):
     #             else:
     #                 del figures[page][bbox_no]
 
-
     return figures, captions
+
 
 def check_region(info, figures, captions):
     final_figures = figures
     final_captions = captions
     for page in figures:
         for each_figure in figures[page]:
-            if len(each_figure[1])>0:
-                caption_overlap_ratio = overlap_ratio_based(each_figure[1][0], each_figure[0])
+            if len(each_figure[1]) > 0:
+                caption_overlap_ratio = overlap_ratio_based(
+                    each_figure[1][0], each_figure[0])
 
-                if (each_figure[1][0][0]+each_figure[1][0][2]) > info['right_bbox'][0]:
-                    each_figure[1][0][2] = info['right_bbox'][0]- each_figure[1][0][0]
+                if (each_figure[1][0][0] +
+                        each_figure[1][0][2]) > info['right_bbox'][0]:
+                    each_figure[1][0][
+                        2] = info['right_bbox'][0] - each_figure[1][0][0]
                 # for two column documents
                 if each_figure[0][2] > 1.5 *info['row_width'] and each_figure[1][0][1] > each_figure[0][1] + each_figure[0][3] \
                     and each_figure[1][0][0] + each_figure[1][0][2]< each_figure[0][0]+ each_figure[0][2]/2 \
                     and each_figure[1][0][3] >3*info['row_height']:
-                    each_figure[1][0][2] = 2*each_figure[1][0][2] + 2*info['row_height']
+                    each_figure[1][0][
+                        2] = 2 * each_figure[1][0][2] + 2 * info['row_height']
 
                 if caption_overlap_ratio > 0.8:
-                # spliting caption box and the figure box
-                # top caption
+                    # spliting caption box and the figure box
+                    # top caption
                     if each_figure[1][0][1]>=each_figure[0][1] and (each_figure[1][0][1]-each_figure[0][1])<2*info['row_height']\
                         and each_figure[1][0][0]<each_figure[0][0]+each_figure[0][2]/2 and each_figure[1][0][0] +each_figure[1][0][2]>each_figure[0][0]+each_figure[0][2]/2 \
                         and each_figure[0][1]+each_figure[0][3]-each_figure[1][0][1]-each_figure[1][0][3] > 5*info['row_height']:
-                        each_figure[0] = [each_figure[0][0], each_figure[1][0][1]+each_figure[1][0][3],
-                                          each_figure[0][2], each_figure[0][1]+each_figure[0][3]-each_figure[1][0][1]-each_figure[1][0][3]]
+                        each_figure[0] = [
+                            each_figure[0][0],
+                            each_figure[1][0][1] + each_figure[1][0][3],
+                            each_figure[0][2],
+                            each_figure[0][1] + each_figure[0][3] -
+                            each_figure[1][0][1] - each_figure[1][0][3]
+                        ]
                 # down caption
                     elif each_figure[0][1]+each_figure[0][3]>=each_figure[1][0][1]+each_figure[1][0][3] and (each_figure[0][1]+each_figure[0][3]-each_figure[1][0][1]-each_figure[1][0][3]) < 2 * info['row_height'] \
                             and each_figure[1][0][0] < each_figure[0][0] + each_figure[0][2] / 2 and \
                             each_figure[1][0][0] + each_figure[1][0][2] > each_figure[0][0] + each_figure[0][2] / 2 \
                             and each_figure[0][1] + each_figure[0][3] - each_figure[1][0][1] > 5 * info['row_height']:
-                        each_figure[0] = [each_figure[0][0], each_figure[0][1],
-                                              each_figure[0][2],
-                                              each_figure[0][1] + each_figure[0][3] - each_figure[1][0][1]]
+                        each_figure[0] = [
+                            each_figure[0][0], each_figure[0][1],
+                            each_figure[0][2], each_figure[0][1] +
+                            each_figure[0][3] - each_figure[1][0][1]
+                        ]
                 # right caption
                     elif each_figure[1][0][0]+ each_figure[1][0][2]<= each_figure[0][0] + each_figure[0][2] and (each_figure[0][0] + each_figure[0][2] - each_figure[1][0][0]- each_figure[1][0][2]) < 2 * info['row_height'] \
                              and each_figure[1][0][0] > each_figure[0][0] + each_figure[0][2]/2 \
                             and each_figure[1][0][0] - each_figure[0][0] > 5 * info['row_height']:
-                        each_figure[0] = [each_figure[0][0], each_figure[0][1],
-                                          each_figure[1][0][0] - each_figure[0][0],
-                                          each_figure[0][3]]
+                        each_figure[0] = [
+                            each_figure[0][0], each_figure[0][1],
+                            each_figure[1][0][0] - each_figure[0][0],
+                            each_figure[0][3]
+                        ]
                 # left caption
                     elif each_figure[1][0][0] >= each_figure[0][0] and (each_figure[1][0][0] - each_figure[0][0]) < 2 *info['row_height'] \
                         and each_figure[1][0][0] + each_figure[1][0][2]< each_figure[0][0] + each_figure[0][2] / 2\
                         and each_figure[0][0]+each_figure[0][2] - each_figure[1][0][0] > 5 * info['row_height']:
-                        each_figure[0] = [each_figure[1][0][0], each_figure[0][1],
-                                      each_figure[0][0]+each_figure[0][2] - each_figure[1][0][0],
-                                      each_figure[0][3]]
+                        each_figure[0] = [
+                            each_figure[1][0][0], each_figure[0][1],
+                            each_figure[0][0] + each_figure[0][2] -
+                            each_figure[1][0][0], each_figure[0][3]
+                        ]
 
     return figures, captions
+
 
 def merge_boxes(figures, cap_regions, table_box, info):
     # region overlap
     # distance between all objects, thresh in 4 lines
     # objects under table box
-    label = [-1]*len(figures)
+    label = [-1] * len(figures)
     fig_merged = []
 
     for j in range(len(figures)):
@@ -793,17 +999,18 @@ def merge_boxes(figures, cap_regions, table_box, info):
         for i in range(len(cap_regions)):
             overlap = overlap_ratio_based(figure, cap_regions[i][1])
             if overlap > 0.5:
-                label[j]=i
+                label[j] = i
     for i in range(len(cap_regions)):
-        index = [no for no in range(len(label)) if label[no] ==i]
+        index = [no for no in range(len(label)) if label[no] == i]
         check_box = figures[index]
-        dis_matrix = np.zeros(shape=(len(check_box),len(check_box)))
+        dis_matrix = np.zeros(shape=(len(check_box), len(check_box)))
         for j in range(len(check_box)):
             for k in range(len(check_box)):
-                if j ==k:
-                    dis_matrix[j][k] = 10*info['row_height']
+                if j == k:
+                    dis_matrix[j][k] = 10 * info['row_height']
                 else:
-                    dis_matrix[j][k] = manhattan_dist(check_box[j], check_box[k])
+                    dis_matrix[j][k] = manhattan_dist(check_box[j],
+                                                      check_box[k])
         dis_matrix = min(dis_matrix)
 
     #
@@ -853,6 +1060,7 @@ def overlap_ratio_based(box1, box2):
         overlap_ratio = float(SI) / box1_area
     return overlap_ratio
 
+
 def bbox_distance(bbox1, bbox2):
     x1 = bbox1[0]
     y1 = bbox1[1]
@@ -885,12 +1093,14 @@ def bbox_distance(bbox1, bbox2):
     else:  # rectangles intersect
         return 0
 
+
 def manhattan_dist(a, b):
-    return sum(abs(a-b) for a,b in zip(a, b))
+    return sum(abs(a - b) for a, b in zip(a, b))
+
 
 def merge_two_boxes(bbox1, bbox2):
     x0 = min(bbox1[0], bbox2[0])
     y0 = min(bbox1[1], bbox2[1])
-    x1 = max(bbox1[0]+bbox1[2], bbox2[0]+bbox2[2])
+    x1 = max(bbox1[0] + bbox1[2], bbox2[0] + bbox2[2])
     y1 = max(bbox1[1] + bbox1[3], bbox2[1] + bbox2[3])
-    return [x0, y0, x1-x0, y1-y0]
+    return [x0, y0, x1 - x0, y1 - y0]
