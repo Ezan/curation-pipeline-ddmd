@@ -1,0 +1,32 @@
+{
+  "pages_annotated": [],
+  "figures": [
+    {
+      "page_width": 595,
+      "caption_text": [
+        "Fig. 2. Interactions between quorum sensing systems of P. aeruginosa.",
+        "Blue arrows represent an activation effect. The blue perpendicular line represents an inhibitory effect. Black arrows represent virulence factor",
+        "outputs (black box) and functions in biofilm development (blue box)."
+      ],
+      "figure_type": "Figure",
+      "region_bb": [123, 89, 345, 278],
+      "caption_bb": [46.0, 376.0, 416.0, 32.0],
+      "page": 6,
+      "page_height": 794
+    },
+    {
+      "page_width": 595,
+      "caption_text": [
+        "Fig. 1. Diagrammatic representation of the developmental stages of P. aeruginosa biofilm.",
+        "The diagram presents (1) the planktonic stage, (2) attachment of bacteria to a surface, (3) production of the extracellular matrix, (4) maturation of",
+        "biofilm structures, (5) spatial differentiation, and (6) biofilm dispersal."
+      ],
+      "figure_type": "Figure",
+      "region_bb": [105, 388, 384, 289],
+      "caption_bb": [46.0, 683.0, 423.0, 32.0],
+      "page": 2,
+      "page_height": 794
+    }
+  ],
+  "fig_no": 2
+}

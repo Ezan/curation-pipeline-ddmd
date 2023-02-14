@@ -1,0 +1,210 @@
+{
+  "pages_annotated": [],
+  "figures": [
+    {
+      "page_width": 595,
+      "caption_text": [
+        "Figure 3. SEM examination for eradication of",
+        "PAO1 mature biofilm by norspermidine. The",
+        "24 h mature biofilms on (A) catheter and",
+        "cover slide were cultured with (4 mmol/L) or",
+        "without norspermidine for another 24 h,",
+        "then fixed and examined by SEM. (B)",
+        "Norspermidine reduced the biofilm biomass",
+        "and changed its morphology."
+      ],
+      "figure_type": "Figure",
+      "region_bb": [220, 82, 122, 189],
+      "caption_bb": [392.0, 326.0, 136.0, 81.0],
+      "page": 7,
+      "page_height": 782
+    },
+    {
+      "page_width": 595,
+      "caption_text": [
+        "Figure 4. Attachment of PAO1 cells to the surfaces of microtiter plate",
+        "wells containing norspermidine. Experiment is representative of three",
+        "independent tests. *P < 0.05 versus untreated control, and error bars",
+        "indicate SD."
+      ],
+      "figure_type": "Figure",
+      "region_bb": [64, 82, 463.0, 490.0],
+      "caption_bb": [65.0, 568.0, 209.0, 39.0],
+      "page": 7,
+      "page_height": 782
+    },
+    {
+      "page_width": 595,
+      "caption_text": [
+        "Figure 4. Attachment of PAO1 cells to the surfaces of microtiter plate",
+        "wells containing norspermidine. Experiment is representative of three",
+        "independent tests. *P < 0.05 versus untreated control, and error bars",
+        "indicate SD."
+      ],
+      "figure_type": "Figure",
+      "region_bb": [224, 287, 303.0, 285.0],
+      "caption_bb": [65.0, 568.0, 209.0, 39.0],
+      "page": 7,
+      "page_height": 782
+    },
+    {
+      "page_width": 595,
+      "caption_text": [
+        "Figure 1. PAO1 planktonic cell growth with norspermidine. (A) Kinetic planktonic cell growth (optical density). Cells grown overnight were treated",
+        "with 0, 4, 5, 6, and 7 mmol/L norspermidine, and every 2 h cells were carefully transferred to another microtiter plate for total 18 h, and OD630 nm",
+        "was read. (B) Planktonic cell growth (CFU). PAO1 cells grown overnight were treated with 0, 4, 5, 6, and 8 mmol/L norspermidine, and every 2 h cells",
+        "were diluted and spiral plated on blood agar plates. Error bars represent SD."
+      ],
+      "figure_type": "Figure",
+      "region_bb": [155, 70, 304, 107],
+      "caption_bb": [65.0, 203.0, 445.0, 39.0],
+      "page": 5,
+      "page_height": 782
+    },
+    {
+      "page_width": 595,
+      "caption_text": [
+        "Figure 2. The effect of norspermidine",
+        "against PAO1 biofilm. (A) Biofilm formation.",
+        "Overnight culture was treated with",
+        "0\u20135 mmol/L norspermidine for 24 h. The",
+        "volume of biofilm was determined by crystal",
+        "violet assay. Error bars represent SD. (B)",
+        "Biofilm eradication. Twenty-f\u00adour hour",
+        "mature biofilms were cultured overnight",
+        "with norspermidine at concentrations",
+        "ranging from 0 to 6 mmol/L and the",
+        "quantification of biofilm formation",
+        "determined by crystal violet assay. *P < 0.05",
+        "versus untreated control. Error bars represent",
+        "SD. (C) Representative images",
+        "(magnification, 10 \u00d7 100) of PAO1 biofilm",
+        "treated with norspermidine, and the effects",
+        "of norspermidine were assessed by crystal",
+        "violet staining."
+      ],
+      "figure_type": "Figure",
+      "region_bb": [239, 271, 141, 91],
+      "caption_bb": [393.0, 419.0, 135.0, 186.0],
+      "page": 5,
+      "page_height": 782
+    },
+    {
+      "page_width": 595,
+      "caption_text": [
+        "Figure 2. The effect of norspermidine",
+        "against PAO1 biofilm. (A) Biofilm formation.",
+        "Overnight culture was treated with",
+        "0\u20135 mmol/L norspermidine for 24 h. The",
+        "volume of biofilm was determined by crystal",
+        "violet assay. Error bars represent SD. (B)",
+        "Biofilm eradication. Twenty-f\u00adour hour",
+        "mature biofilms were cultured overnight",
+        "with norspermidine at concentrations",
+        "ranging from 0 to 6 mmol/L and the",
+        "quantification of biofilm formation",
+        "determined by crystal violet assay. *P < 0.05",
+        "versus untreated control. Error bars represent",
+        "SD. (C) Representative images",
+        "(magnification, 10 \u00d7 100) of PAO1 biofilm",
+        "treated with norspermidine, and the effects",
+        "of norspermidine were assessed by crystal",
+        "violet staining."
+      ],
+      "figure_type": "Figure",
+      "region_bb": [75, 271, 318.0, 334.0],
+      "caption_bb": [393.0, 419.0, 135.0, 186.0],
+      "page": 5,
+      "page_height": 782
+    },
+    {
+      "page_width": 595,
+      "caption_text": [
+        "Figure 2. The effect of norspermidine",
+        "against PAO1 biofilm. (A) Biofilm formation.",
+        "Overnight culture was treated with",
+        "0\u20135 mmol/L norspermidine for 24 h. The",
+        "volume of biofilm was determined by crystal",
+        "violet assay. Error bars represent SD. (B)",
+        "Biofilm eradication. Twenty-f\u00adour hour",
+        "mature biofilms were cultured overnight",
+        "with norspermidine at concentrations",
+        "ranging from 0 to 6 mmol/L and the",
+        "quantification of biofilm formation",
+        "determined by crystal violet assay. *P < 0.05",
+        "versus untreated control. Error bars represent",
+        "SD. (C) Representative images",
+        "(magnification, 10 \u00d7 100) of PAO1 biofilm",
+        "treated with norspermidine, and the effects",
+        "of norspermidine were assessed by crystal",
+        "violet staining."
+      ],
+      "figure_type": "Figure",
+      "region_bb": [226, 412, 167.0, 193.0],
+      "caption_bb": [393.0, 419.0, 135.0, 186.0],
+      "page": 5,
+      "page_height": 782
+    },
+    {
+      "page_width": 595,
+      "caption_text": [
+        "Figure 5. Photographs of plates showing",
+        "inhibition of swimming motility of standard",
+        "strain PAO1 in the presence of norspermidine",
+        "(4 mmol/L)."
+      ],
+      "figure_type": "Figure",
+      "region_bb": [57.0, 82, 314.0, 158.0],
+      "caption_bb": [57.0, 201.0, 136.0, 39.0],
+      "page": 8,
+      "page_height": 782
+    },
+    {
+      "page_width": 595,
+      "caption_text": [
+        "Figure 6. Norspermidne restrains the",
+        "expression of QS-r\u00adelated genes and",
+        "production of virulence factors. (A) PAO1 was C",
+        "cultured and treated with 0 or 4 mmol/L",
+        "norspermidine and qRT-P\u00ad CR analysis was",
+        "performed as described in the Materials and",
+        "Methods section. Activities of virulence",
+        "factors including (B) protease activity, (C)",
+        "pyocyanin, and (D) elastase activity at",
+        "different concentrations of norspermidine",
+        "(0, 2, and 4 mmol/L) were analyzed.*P < 0.05",
+        "versus untreated control, and error bars",
+        "indicate SD."
+      ],
+      "figure_type": "Figure",
+      "region_bb": [57.0, 375.0, 309.0, 123.0],
+      "caption_bb": [57.0, 375.0, 144.0, 134.0],
+      "page": 8,
+      "page_height": 782
+    },
+    {
+      "page_width": 595,
+      "caption_text": [
+        "Figure 6. Norspermidne restrains the",
+        "expression of QS-r\u00adelated genes and",
+        "production of virulence factors. (A) PAO1 was C",
+        "cultured and treated with 0 or 4 mmol/L",
+        "norspermidine and qRT-P\u00ad CR analysis was",
+        "performed as described in the Materials and",
+        "Methods section. Activities of virulence",
+        "factors including (B) protease activity, (C)",
+        "pyocyanin, and (D) elastase activity at",
+        "different concentrations of norspermidine",
+        "(0, 2, and 4 mmol/L) were analyzed.*P < 0.05",
+        "versus untreated control, and error bars",
+        "indicate SD."
+      ],
+      "figure_type": "Figure",
+      "region_bb": [57.0, 81, 473.0, 417.0],
+      "caption_bb": [57.0, 375.0, 144.0, 134.0],
+      "page": 8,
+      "page_height": 782
+    }
+  ],
+  "fig_no": 6
+}

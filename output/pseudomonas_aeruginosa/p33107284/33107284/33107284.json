@@ -1,0 +1,24 @@
+{
+  "pages_annotated": [],
+  "figures": [
+    {
+      "page_width": 453,
+      "caption_text": [],
+      "figure_type": "Figure",
+      "region_bb": [41, 64, 371, 530.0],
+      "caption_bb": [],
+      "page": 7,
+      "page_height": 680
+    },
+    {
+      "page_width": 453,
+      "caption_text": [],
+      "figure_type": "Figure",
+      "region_bb": [41, 492, 369, 118],
+      "caption_bb": [],
+      "page": 6,
+      "page_height": 680
+    }
+  ],
+  "fig_no": 0
+}

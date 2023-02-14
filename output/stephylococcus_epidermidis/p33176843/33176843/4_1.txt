@@ -1,0 +1,1 @@
+Fig. 3 The effect of sonication is seen by comparing area coveredby biofilm before and after sonication visualized by epifluorescence(a). To be able to quantify the covered area, pictures weredichotomized with help of a macro in the Fiji software (b). Theresulting red area represents biofilm

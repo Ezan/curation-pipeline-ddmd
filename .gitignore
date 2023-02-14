@@ -1,6 +1,6 @@
 .vscode/
 dependencies/
-output/
+#output/
 .DS_Store
 .idea/
 chromedriver

@@ -1,0 +1,3114 @@
+[
+  [
+    1,
+    [
+      [[65.0, 71.0, 98, 11], "ORIGINAL RESEARCH"],
+      [
+        [65.0, 95.0, 421, 18],
+        "Effects of norspermidine on Pseudomonas aeruginosa"
+      ],
+      [[65.0, 113.0, 267, 17], "biofilm formation and eradication"],
+      [
+        [65.0, 134.0, 470, 15],
+        "Lin Qu1,a, Pengfei She1,a, Yangxia Wang2, Fengxia Liu1, Di Zhang1, Lihua Chen1, Zhen Luo1, Huan Xu1,"
+      ],
+      [[65.0, 146.0, 102, 15], "Yong Qi1 & Yong Wu1"],
+      [
+        [65.0, 163.0, 379, 13],
+        "1Department of Medicine Clinical Laboratory, The Third Xiangya Hospital of Central South University, Changsha 410013, China"
+      ],
+      [
+        [65.0, 173.0, 242, 13],
+        "2Xiangya School of Medicine, Central South University, Changsha 410013, China"
+      ],
+      [[65.0, 226.0, 33, 9], "Keywords"],
+      [[65.0, 237.0, 127, 8], "Bacterial adhesion, biofilm, norspermidine,"],
+      [[65.0, 247.0, 130, 8], "Pseudomonas aeruginosa, quorum sensing."],
+      [[65.0, 268.0, 53, 9], "Correspondence"],
+      [[65.0, 279.0, 129, 8], "Yong Wu, Department of Medicine Clinical"],
+      [[65.0, 289.0, 124, 8], "Laboratory, The Third Xiangya Hospital of"],
+      [[65.0, 300.0, 133, 8], "Central South University, Changsha 410013,"],
+      [[65.0, 310.0, 96, 8], "China. Tel: +86 731 8861 8441;"],
+      [[65.0, 321.0, 76, 8], "Fax: +86 731 8861 8441;"],
+      [[65.0, 331.0, 88, 8], "E-mail: wuyong_xy@126.com"],
+      [[65.0, 352.0, 68, 9], "Funding Information"],
+      [[65.0, 363.0, 116, 8], "The authors acknowledge the financial"],
+      [[65.0, 373.0, 135, 8], "support of the Natural Science Foundation of"],
+      [[65.0, 384.0, 114, 8], "Hunan Province, China (no. 12JJ3092,"],
+      [[65.0, 394.0, 136, 8], "2015JJ2188, and 2015JJ3165), and Graduate"],
+      [[65.0, 405.0, 123, 8], "Student Innovation Project of the Central"],
+      [[65.0, 415.0, 103, 8], "South University (no. 502200714)."],
+      [[65.0, 436.0, 127, 8], "Received: 29 September 2015; Revised: 15"],
+      [[65.0, 447.0, 124, 8], "December 2015; Accepted: 27 December"],
+      [[65.0, 457.0, 16, 8], "2015"],
+      [[65.0, 478.0, 126, 9], "MicrobiologyOpen 2016; 5(3): 402\u2013412"],
+      [[65.0, 499.0, 72, 8], "doi: 10.1002/mbo3.338"],
+      [[65.0, 519.0, 124, 13], "aThese authors contributed equally to this"],
+      [[65.0, 531.0, 17, 8], "work."],
+      [[225.0, 226.0, 36, 10], "Abstract"],
+      [
+        [225.0, 245.0, 287, 9],
+        "Biofilms are defined as aggregation of single cell microorganisms and associated"
+      ],
+      [
+        [225.0, 257.0, 265, 9],
+        "with over 80% of all the microbial infections. Pseudomonas aeruginosa is a"
+      ],
+      [
+        [225.0, 269.0, 283, 9],
+        "Gram-\u00adnegative opportunistic pathogen capable of leading to various infections"
+      ],
+      [
+        [225.0, 281.0, 283, 9],
+        "in immunocompromised people. Recent studies showed that norspermidine, a"
+      ],
+      [
+        [225.0, 293.0, 284, 9],
+        "kind of polyamine, prevented and disrupted biofilm formation by some Gram-\u00ad"
+      ],
+      [
+        [225.0, 305.0, 284, 9],
+        "negative bacterium. In this study, the effects of norspermidine on P. aeruginosa"
+      ],
+      [
+        [225.0, 317.0, 283, 9],
+        "biofilm formation and eradication were tested. Microtiter plate combined with"
+      ],
+      [
+        [225.0, 329.0, 281, 9],
+        "crystal violet staining was used to study the effects of norspermidine on P. aer-"
+      ],
+      [
+        [225.0, 341.0, 278, 9],
+        "uginosa initial attachment, then we employed SEM (scanning electron micro-"
+      ],
+      [
+        [225.0, 353.0, 271, 9],
+        "scope), qRT-P\u00adCR, and QS-\u00adrelated virulence factor assays to investigate how"
+      ],
+      [
+        [225.0, 365.0, 276, 9],
+        "norspermidine prevent biofilm formation by P. aeruginosa. We reported that"
+      ],
+      [
+        [225.0, 377.0, 281, 9],
+        "high-\u00addose norspermidine had bactericide effect on P. aeruginosa, and norsper-"
+      ],
+      [
+        [225.0, 389.0, 278, 9],
+        "midine began to inhibit biofilm formation and eradicate 24-h\u00ad mature biofilm"
+      ],
+      [
+        [225.0, 401.0, 269, 9],
+        "at concentration of 0.1 and 1 mmol/L, respectively, probably by preventing"
+      ],
+      [
+        [225.0, 413.0, 288, 9],
+        "cell-\u00adsurface attachment, inhibiting swimming motility, and downregulating QS-\u00ad"
+      ],
+      [
+        [225.0, 425.0, 278, 9],
+        "related genes expression. To investigate the potential utility of norspermidine"
+      ],
+      [
+        [225.0, 437.0, 283, 9],
+        "in preventing device-r\u00adelated infections, we found that catheters immersed with"
+      ],
+      [
+        [225.0, 449.0, 291, 9],
+        "norspermidine were effective in eradicating mature biofilm. These results suggest"
+      ],
+      [
+        [225.0, 461.0, 282, 9],
+        "that norspermidine could be a potent antibiofilm agent for formulating strate-"
+      ],
+      [[225.0, 473.0, 120, 9], "gies against P. aeruginosa biofilm."],
+      [[65.0, 579.0, 72, 12], "Introduction"],
+      [
+        [65.0, 599.0, 187, 9],
+        "Biofilms are defined as aggregation of single cell mi-"
+      ],
+      [
+        [65.0, 611.0, 202, 9],
+        "croorganisms that are physiologically distinct from their"
+      ],
+      [
+        [65.0, 623.0, 207, 9],
+        "free-\u00adswimming counterparts. Biofilms are associated with"
+      ],
+      [
+        [65.0, 635.0, 198, 9],
+        "over 80% of all the microbial infections associated with"
+      ],
+      [
+        [65.0, 647.0, 201, 9],
+        "the urinary tract, catheters, dental plaque, and gingivitis"
+      ],
+      [
+        [65.0, 659.0, 196, 9],
+        "(Girennavar et al. 2008). The major feature of biofilms"
+      ],
+      [
+        [65.0, 671.0, 205, 9],
+        "is the presence of highly hydrated extracellular polymeric"
+      ],
+      [
+        [65.0, 683.0, 191, 9],
+        "substance (EPS), including polysaccharides, proteins,"
+      ],
+      [
+        [65.0, 695.0, 189, 9],
+        "and extracellular DNA (eDNA) (Billings et al. 2015)."
+      ],
+      [
+        [310.0, 574.0, 192, 9],
+        "In terms of bacterial infections, biofilms can manifest"
+      ],
+      [
+        [310.0, 586.0, 183, 9],
+        "as growth on medical devices or a range of host tis-"
+      ],
+      [
+        [310.0, 598.0, 177, 9],
+        "sues. Compared to their planktonic counterparts,"
+      ],
+      [
+        [310.0, 610.0, 207, 9],
+        "biofilm-\u00adderived bacteria have distinctive phenotypes with"
+      ],
+      [
+        [310.0, 622.0, 199, 9],
+        "regard to growth, gene expression, and protein produc-"
+      ],
+      [
+        [310.0, 634.0, 187, 9],
+        "tion that enable the bacterial communities to persist"
+      ],
+      [
+        [310.0, 646.0, 191, 9],
+        "and cause repeated waves of damage (Costerton et al."
+      ],
+      [
+        [310.0, 658.0, 181, 9],
+        "1999; del Pozo and Patel 2007). Cells embedded in"
+      ],
+      [
+        [310.0, 670.0, 198, 9],
+        "biofilms are up to 1000-f\u00adold more resistant to antibiot-"
+      ],
+      [
+        [310.0, 682.0, 190, 9],
+        "ics compared to their planktonic ones (Kouidhi et al."
+      ],
+      [
+        [310.0, 694.0, 188, 9],
+        "2015). These complications lead to increased patient"
+      ],
+      [[65.0, 718.0, 13, 9], "402"],
+      [
+        [323.0, 719.0, 198, 7],
+        "\u00a9 2016 The Authors. MicrobiologyOpen published by John Wiley & Sons Ltd."
+      ],
+      [
+        [230.0, 728.0, 284, 6],
+        "This is an open access article under the terms of the Creative Commons Attribution License, which permits use,"
+      ],
+      [
+        [290.0, 736.0, 229, 6],
+        "distribution and reproduction in any medium, provided the original work is properly cited."
+      ]
+    ],
+    [782, 595]
+  ],
+  [
+    10,
+    [
+      [[57.0, 42.0, 33, 8], "L. Qu et al."],
+      [
+        [356.0, 42.0, 163, 9],
+        "Effects of Norspermidine on P. aeruginosa Biofilm"
+      ],
+      [
+        [57.0, 72.0, 214, 9],
+        "(nos. 12JJ3092, 2015JJ2188, and 2015JJ3165), and Graduate"
+      ],
+      [
+        [57.0, 84.0, 213, 9],
+        "Student Innovation project of the Central South University"
+      ],
+      [[57.0, 96.0, 62, 9], "(no. 502200714)."],
+      [[57.0, 127.0, 108, 12], "Conflict of Interest"],
+      [[57.0, 147.0, 55, 9], "None declared."],
+      [[57.0, 170.0, 46, 10], "References"],
+      [
+        [57.0, 189.0, 182, 8],
+        "Billings, N., A. Birjiniuk, T. S. Samad, P. S. Doyle, and K."
+      ],
+      [
+        [67.0, 200.0, 181, 8],
+        "Ribbeck. 2015. Material properties of biofilms \u2013 a review"
+      ],
+      [[67.0, 212.0, 152, 8], "of methods for understanding permeability and"],
+      [[67.0, 224.0, 126, 8], "mechanics. Rep. Prog. Phys. 78:036601."],
+      [
+        [57.0, 236.0, 167, 8],
+        "Bjarnsholt, T.. 2013. The role of bacterial biofilms in"
+      ],
+      [
+        [67.0, 247.0, 157, 8],
+        "chronic infections. APMIS 121(suppl s136):1\u201358."
+      ],
+      [
+        [57.0, 259.0, 181, 8],
+        "B\u00f6ttcher, T., I. Kolodkin-Gal, R. Kolter, R. Losick, and J."
+      ],
+      [
+        [67.0, 271.0, 186, 8],
+        "Clardy. 2013. Synthesis and activity of biomimetic biofilm"
+      ],
+      [
+        [67.0, 283.0, 147, 8],
+        "disruptors. J. Am. Chem. Soc. 135:2927\u20132930."
+      ],
+      [
+        [57.0, 294.0, 176, 8],
+        "Cha, J. D., M. R. Jeong, S. I. Jeong, and K. Y. Lee. 2007."
+      ],
+      [
+        [67.0, 306.0, 186, 8],
+        "Antibacterial activity of sophoraflavanone G isolated from"
+      ],
+      [
+        [67.0, 318.0, 179, 8],
+        "the roots of Sophora flavescens. J. Microbiol. Biotechnol."
+      ],
+      [[67.0, 330.0, 39, 8], "17:858\u2013864."],
+      [
+        [57.0, 341.0, 184, 8],
+        "Costerton, J. W., P. S. Stewart, and E. P. Greenberg. 1999."
+      ],
+      [
+        [67.0, 353.0, 155, 8],
+        "Bacterial biofilms: a common cause of persistent"
+      ],
+      [[67.0, 365.0, 111, 8], "infections. Science 284:1318\u20131322."],
+      [
+        [57.0, 377.0, 192, 8],
+        "Daniels, R., J. Vanderleyden, and J. Michiels. 2004. Quorum"
+      ],
+      [
+        [67.0, 388.0, 163, 8],
+        "sensing and swarming migration in bacteria. FEMS"
+      ],
+      [[67.0, 400.0, 90, 8], "Microbiol. Rev. 28:261\u2013289."],
+      [
+        [57.0, 412.0, 195, 8],
+        "Favre-Bont\u00e9, S., T. K\u00f6hler, and C. Van Delden. 2003. Biofilm"
+      ],
+      [
+        [67.0, 424.0, 163, 8],
+        "formation by Pseudomonas aeruginosa: a role of the"
+      ],
+      [
+        [67.0, 435.0, 185, 13],
+        "C4-\u00adHSL cell-\u00adto-\u00adcell signal and inhibition by azithromycin."
+      ],
+      [[67.0, 447.0, 127, 8], "J. Antimicrob. Chemother. 52:598\u2013604."],
+      [
+        [57.0, 459.0, 177, 8],
+        "Girennavar, B., M. L. Cepeda, K. A. Soni, A. Vikram, P."
+      ],
+      [
+        [67.0, 471.0, 173, 8],
+        "Jesudhasan, G. K. Jayaprakasha, et al. 2008. Grapefruit"
+      ],
+      [
+        [67.0, 482.0, 186, 8],
+        "juice and its furocoumarins inhibits autoinducer signaling"
+      ],
+      [
+        [67.0, 494.0, 183, 8],
+        "and biofilm formation in bacteria. Int. J. Food Microbiol."
+      ],
+      [[67.0, 506.0, 42, 8], "125:204\u2013208."],
+      [
+        [57.0, 518.0, 189, 8],
+        "G\u00f6tz, F. 2002. Staphylococcus and biofilms. Mol. Microbiol."
+      ],
+      [[67.0, 529.0, 46, 8], "43:1367\u20131378."],
+      [
+        [57.0, 541.0, 168, 8],
+        "Goytia, M., V. L. Dhulipala, and W. M. Shafer. 2013."
+      ],
+      [
+        [67.0, 553.0, 156, 8],
+        "Spermine impairs biofilm formation by Neisseria"
+      ],
+      [
+        [67.0, 565.0, 150, 8],
+        "gonorrhoeae. FEMS Microbiol. Lett. 343:64\u201369."
+      ],
+      [
+        [57.0, 576.0, 186, 8],
+        "Hentzer, M., K. Riedel, T. B. Rasmussen, A. Heydorn, J. B."
+      ],
+      [
+        [67.0, 588.0, 156, 8],
+        "Andersen, M. R. Parsek, et al. 2002. Inhibition of"
+      ],
+      [
+        [67.0, 600.0, 165, 8],
+        "quorum sensing in Pseudomonas aeruginosa biofilm"
+      ],
+      [[67.0, 612.0, 151, 8], "bacteria by a halogenated furanone compound."],
+      [[67.0, 623.0, 84, 8], "Microbiology 148:87\u2013102."],
+      [
+        [57.0, 635.0, 194, 8],
+        "Hobley, L., S. H. Kim, Y. Maezato, S. Wyllie, A. H. Fairlamb,"
+      ],
+      [
+        [67.0, 647.0, 173, 8],
+        "N. R. Stanley-Wall, et al. 2014. Norspermidine is not a"
+      ],
+      [
+        [67.0, 659.0, 160, 8],
+        "self-\u00adproduced trigger for biofilm disassembly. Cell"
+      ],
+      [[67.0, 670.0, 42, 8], "156:844\u2013854."],
+      [
+        [57.0, 682.0, 183, 8],
+        "Hochbaum, A. I., I. Kolodkin-Gal, L. Foulston, R. Kolter,"
+      ],
+      [
+        [67.0, 694.0, 172, 8],
+        "J. Aizenberg, and R. Losick. 2011. Inhibitory effects of"
+      ],
+      [
+        [312.0, 72.0, 150, 8],
+        "d-\u00adamino acids on Staphylococcus aureus biofilm"
+      ],
+      [[312.0, 83.0, 134, 8], "development. J. Bacteriol. 193:5616\u20135622."],
+      [
+        [302.0, 95.0, 188, 8],
+        "H\u00f8iby, N., O. Ciofu, and T. Bjarnsholt. 2010. Pseudomonas"
+      ],
+      [
+        [312.0, 107.0, 176, 8],
+        "aeruginosa biofilms in cystic fibrosis. Future Microbiol."
+      ],
+      [[312.0, 119.0, 42, 8], "5:1663\u20131674."],
+      [
+        [302.0, 130.0, 156, 8],
+        "Holloway, B. W. 1955. Genetic recombination in"
+      ],
+      [
+        [312.0, 142.0, 179, 8],
+        "Pseudomonas aeruginosa. J. Gen. Microbiol. 13:572\u2013581."
+      ],
+      [
+        [302.0, 154.0, 160, 8],
+        "Huang, R., M. Li, M. Ye, K. Yang, X. Xu, and R. L."
+      ],
+      [
+        [312.0, 166.0, 160, 8],
+        "Gregory. 2014. Effects of nicotine on Streptococcus"
+      ],
+      [
+        [312.0, 177.0, 182, 8],
+        "gordonii growth, biofilm formation, and cell aggregation."
+      ],
+      [[312.0, 189.0, 131, 8], "Appl. Environ. Microbiol. 80:7212\u20137218."],
+      [
+        [302.0, 201.0, 161, 8],
+        "Kappachery, S., D. Paul, J. Yoon, and J. H. Kweon."
+      ],
+      [[312.0, 213.0, 137, 8], "2010. Vanillin, a potential agent to prevent"],
+      [
+        [312.0, 224.0, 168, 8],
+        "biofouling of reverse osmosis membrane. Biofouling"
+      ],
+      [[312.0, 236.0, 39, 8], "26:667\u2013672."],
+      [
+        [302.0, 248.0, 184, 8],
+        "Karatan, E., T. R. Duncan, and P. I. Watnick. 2005. NspS,"
+      ],
+      [
+        [312.0, 260.0, 168, 8],
+        "a predicted polyamine sensor, mediates activation of"
+      ],
+      [
+        [312.0, 271.0, 168, 8],
+        "Vibrio cholerae biofilm formation by norspermidine."
+      ],
+      [[312.0, 283.0, 89, 8], "J. Bacteriol. 187:7434\u20137443."],
+      [
+        [302.0, 295.0, 180, 8],
+        "Kim, B. S., S. J. Park, M. K. Kim, Y. H. Kim, S. B. Lee, K."
+      ],
+      [
+        [312.0, 307.0, 181, 8],
+        "H. Lee, et al. 2015a. Inhibitory effects of Chrysanthemum"
+      ],
+      [
+        [312.0, 318.0, 176, 8],
+        "boreale essential oil on biofilm formation and virulence"
+      ],
+      [
+        [312.0, 330.0, 171, 8],
+        "factor expression of Streptococcus mutans. Evid. Based"
+      ],
+      [[312.0, 342.0, 137, 8], "Complement. Alternat. Med. 2015:616309."],
+      [
+        [302.0, 354.0, 172, 8],
+        "Kim, H. S., S. H. Lee, Y. Byun, and H. D. Park. 2015b."
+      ],
+      [
+        [312.0, 365.0, 166, 8],
+        "6-\u00adGingerol reduces Pseudomonas aeruginosa biofilm"
+      ],
+      [
+        [312.0, 377.0, 179, 8],
+        "formation and virulence via quorum sensing inhibition."
+      ],
+      [[312.0, 389.0, 52, 8], "Sci. Rep. 5:8656."],
+      [
+        [302.0, 401.0, 190, 8],
+        "Kipnis, E., T. Sawa, and J. Wiener-Kronish. 2006. Targeting"
+      ],
+      [
+        [312.0, 412.0, 172, 8],
+        "mechanisms of Pseudomonas aeruginosa pathogenesis."
+      ],
+      [[312.0, 424.0, 88, 8], "Med. Mal. Infect. 36:78\u201391."],
+      [
+        [302.0, 436.0, 182, 8],
+        "Klausen, M., A. Heydorn, P. Ragas, L. Aaes-J\u00f8rgensen, A."
+      ],
+      [
+        [312.0, 448.0, 174, 8],
+        "Lambersen, S. Molin, et al. 2003. Biofilm formation by"
+      ],
+      [
+        [312.0, 459.0, 174, 8],
+        "Pseudomonas aeruginosa wild type, flagella and type IV"
+      ],
+      [
+        [312.0, 471.0, 142, 8],
+        "pili mutants. Mol. Microbiol. 48:1511\u20131524."
+      ],
+      [
+        [302.0, 483.0, 183, 8],
+        "Kolodkin-Gal, I., D. Romero, S. Cao, J. Clardy, R. Kolter,"
+      ],
+      [
+        [312.0, 495.0, 159, 8],
+        "and R. Losick. 2010. d-\u00adamino acids trigger biofilm"
+      ],
+      [[312.0, 506.0, 110, 8], "disassembly. Science 328:627\u2013629."],
+      [
+        [302.0, 518.0, 172, 8],
+        "Kouidhi, B., Y. M. A. I. Qurashi, and K. Chaieb. 2015."
+      ],
+      [
+        [312.0, 530.0, 160, 8],
+        "Drug resistance of bacterial dental biofilm and the"
+      ],
+      [
+        [312.0, 542.0, 169, 8],
+        "potential use of natural compounds as alternative for"
+      ],
+      [
+        [312.0, 553.0, 171, 8],
+        "prevention and treatment. Microb. Pathog. 80:39\u201349."
+      ],
+      [
+        [302.0, 565.0, 188, 8],
+        "Lee, J., V. Sperandio, D. E. Frantz, J. Longgood, A. Camilli,"
+      ],
+      [
+        [312.0, 577.0, 165, 8],
+        "M. A. Phillips, et al. 2009. An alternative polyamine"
+      ],
+      [
+        [312.0, 589.0, 162, 8],
+        "biosynthetic pathway is widespread in bacteria and"
+      ],
+      [
+        [312.0, 600.0, 180, 8],
+        "essential for biofilm formation in Vibrio cholerae. J. Biol."
+      ],
+      [[312.0, 612.0, 73, 8], "Chem. 284:9899\u20139907."],
+      [
+        [302.0, 624.0, 163, 8],
+        "Lister, P. D., D. J. Wolter, and N. D. Hanson. 2009."
+      ],
+      [
+        [312.0, 636.0, 177, 8],
+        "Antibacterial-\u00adresistant Pseudomonas aeruginosa: clinical"
+      ],
+      [
+        [312.0, 647.0, 160, 8],
+        "impact and complex regulation of chromosomally"
+      ],
+      [
+        [312.0, 659.0, 173, 8],
+        "encoded resistance mechanisms. Clin. Microbiol. Rev."
+      ],
+      [[312.0, 671.0, 39, 8], "22:582\u2013610."],
+      [
+        [302.0, 683.0, 181, 8],
+        "Mack, D. 1999. Molecular mechanisms of Staphylococcus"
+      ],
+      [
+        [312.0, 694.0, 196, 8],
+        "epidermidis biofilm formation. J. Hosp. Infect. 43:S113\u2013S125."
+      ],
+      [
+        [57.0, 730.0, 198, 7],
+        "\u00a9 2016 The Authors. MicrobiologyOpen published by John Wiley & Sons Ltd."
+      ],
+      [[516.0, 729.0, 13, 9], "411"]
+    ],
+    [782, 595]
+  ],
+  [
+    11,
+    [
+      [
+        [65.0, 42.0, 163, 9],
+        "Effects of Norspermidine on P. aeruginosa Biofilm"
+      ],
+      [[503.0, 42.0, 33, 8], "L. Qu et al."],
+      [
+        [65.0, 72.0, 166, 8],
+        "Mack, D., P. Becker, I. Chatterjee, S. Dobinsky, J. K."
+      ],
+      [
+        [75.0, 83.0, 178, 8],
+        "Knobloch, G. Peters, et al. 2004. Mechanisms of biofilm"
+      ],
+      [[75.0, 95.0, 146, 8], "formation in Staphylococcus epidermidis and"],
+      [
+        [75.0, 107.0, 180, 8],
+        "Staphylococcus aureus: functional molecules, regulatory"
+      ],
+      [
+        [75.0, 119.0, 177, 8],
+        "circuits, and adaptive responses. Int. J. Med. Microbiol."
+      ],
+      [[75.0, 130.0, 42, 8], "294:203\u2013212."],
+      [
+        [65.0, 142.0, 182, 8],
+        "Maisuria, V. B., Z. Hosseinidoust, and N. Tufenkji. 2015."
+      ],
+      [
+        [75.0, 154.0, 162, 8],
+        "Polyphenolic extract from maple syrup potentiates"
+      ],
+      [
+        [75.0, 166.0, 183, 8],
+        "antibiotic susceptibility and reduces biofilm formation of"
+      ],
+      [[75.0, 177.0, 150, 8], "pathogenic bacteria. Appl. Environ. Microbiol."],
+      [[75.0, 189.0, 46, 8], "81:3782\u20133792."],
+      [
+        [65.0, 201.0, 175, 8],
+        "Mattick, J. S. 2002. Type IV pili and twitching motility."
+      ],
+      [[75.0, 213.0, 112, 8], "Annu. Rev. Microbiol. 56:289\u2013314."],
+      [
+        [65.0, 224.0, 164, 8],
+        "McGinnis, M. W., Z. M. Parker, N. E. Walter, A. C."
+      ],
+      [
+        [75.0, 236.0, 167, 8],
+        "Rutkovsky, C. Cartaya-Marin, and E. Karatan. 2009."
+      ],
+      [
+        [75.0, 248.0, 187, 8],
+        "Spermidine regulates Vibrio cholerae biofilm formation via"
+      ],
+      [
+        [75.0, 260.0, 181, 8],
+        "transport and signaling pathways. FEMS Microbiol. Lett."
+      ],
+      [[75.0, 271.0, 42, 8], "299:166\u2013174."],
+      [
+        [65.0, 283.0, 172, 8],
+        "Nesse, L. L., K. Berg, and L. K. Vestby. 2015. Effects of"
+      ],
+      [
+        [75.0, 295.0, 179, 8],
+        "norspermidine and spermidine on biofilm formation by"
+      ],
+      [
+        [75.0, 307.0, 197, 8],
+        "potentially pathogenic Escherichia coli and Salmonella enterica"
+      ],
+      [
+        [75.0, 318.0, 188, 8],
+        "wild-\u00adtype strains. Appl. Environ. Microbiol. 81:2226\u20132232."
+      ],
+      [
+        [65.0, 330.0, 189, 8],
+        "O\u2019Toole, G. A., and R. Kolter. 1998. Flagellar and twitching"
+      ],
+      [
+        [75.0, 342.0, 185, 8],
+        "motility are necessary for Pseudomonas aeruginosa biofilm"
+      ],
+      [[75.0, 354.0, 137, 8], "development. Mol. Microbiol. 30:295\u2013304."],
+      [
+        [65.0, 365.0, 149, 8],
+        "O\u2019Toole, G. A., L. A. Pratt, P. I. Watnick, D. K."
+      ],
+      [
+        [75.0, 377.0, 169, 8],
+        "Newman, V. B. Weaver, and R. Kolter. 1999. Genetic"
+      ],
+      [
+        [75.0, 389.0, 177, 8],
+        "approaches to the study of biofilms. Methods Enzymol."
+      ],
+      [[75.0, 401.0, 39, 8], "310:91\u2013109."],
+      [
+        [65.0, 412.0, 159, 8],
+        "Parker, Z. M., S. S. Pendergraft, J. Sobieraj, M. M."
+      ],
+      [
+        [75.0, 424.0, 173, 8],
+        "McGinnis, and E. Karatan. 2012. Elevated levels of the"
+      ],
+      [
+        [75.0, 436.0, 175, 8],
+        "norspermidine synthesis enzyme NspC enhance Vibrio"
+      ],
+      [
+        [75.0, 448.0, 182, 8],
+        "cholerae biofilm formation without affecting intracellular"
+      ],
+      [
+        [75.0, 459.0, 173, 8],
+        "norspermidine concentrations. FEMS Microbiol. Lett."
+      ],
+      [[75.0, 471.0, 35, 8], "329:18\u201327."],
+      [
+        [65.0, 483.0, 161, 8],
+        "del Pozo, J. L., and R. Patel. 2007. The challenge of"
+      ],
+      [
+        [75.0, 495.0, 167, 8],
+        "treating biofilm-\u00adassociated bacterial infections. Clin."
+      ],
+      [[75.0, 506.0, 96, 8], "Pharmacol. Ther. 82:204\u2013209."],
+      [
+        [65.0, 518.0, 183, 8],
+        "Rahme, L. G., E. J. Stevens, S. F. Wolfort, J. Shao, J. Shao,"
+      ],
+      [
+        [75.0, 530.0, 177, 8],
+        "R. G. Tompkins, et al. 1995. Common virulence factors"
+      ],
+      [
+        [75.0, 542.0, 182, 8],
+        "for bacterial pathogenicity in plants and animals. Science"
+      ],
+      [[75.0, 553.0, 50, 8], "268:1899\u20131902."],
+      [
+        [65.0, 565.0, 165, 8],
+        "Ram\u00f3n-Per\u00e9z, M. L., F. D\u00edaz-Cedillo, A. Contreras-"
+      ],
+      [
+        [75.0, 577.0, 186, 8],
+        "Rodr\u00edguez, G. Betanzos-Cabrera, H. Peralta, S. Rodr\u00edguez-"
+      ],
+      [
+        [75.0, 589.0, 160, 8],
+        "Mart\u00ednez, et al. 2015. Different sensitivity levels to"
+      ],
+      [
+        [75.0, 600.0, 165, 8],
+        "norspermidine on biofilm formation in clinical and"
+      ],
+      [
+        [75.0, 612.0, 175, 8],
+        "commensal Staphylococcus epidermidis strains. Microb."
+      ],
+      [[75.0, 624.0, 53, 8], "Pathog. 79:8\u201316."],
+      [
+        [65.0, 636.0, 177, 8],
+        "Rasamiravaka, T., Q. Labtani, P. Duez, and M. El Jaziri."
+      ],
+      [[75.0, 647.0, 156, 8], "2015. The formation of biofilms by Pseudomonas"],
+      [
+        [75.0, 659.0, 153, 8],
+        "aeruginosa: a review of the natural and synthetic"
+      ],
+      [
+        [321.0, 72.0, 186, 8],
+        "compounds interfering with control mechanisms. Biomed"
+      ],
+      [[321.0, 83.0, 70, 8], "Res. Int. 2015:759348."],
+      [
+        [310.0, 95.0, 156, 8],
+        "Rashid, M. H., and A. Kornberg. 2000. Inorganic"
+      ],
+      [
+        [321.0, 107.0, 177, 8],
+        "polyphosphate is needed for swimming, swarming, and"
+      ],
+      [
+        [321.0, 119.0, 171, 8],
+        "twitching motilities of Pseudomonas aeruginosa. Proc."
+      ],
+      [[321.0, 130.0, 114, 8], "Natl. Acad. Sci. USA 97:4885\u20134890."],
+      [
+        [310.0, 142.0, 158, 8],
+        "Sanchez, C. J. Jr, E. M. Prieto, C. A. Krueger, K. J."
+      ],
+      [
+        [321.0, 154.0, 165, 8],
+        "Zienkiewicz, D. R. Romano, C. L. Ward, et al. 2013."
+      ],
+      [
+        [321.0, 166.0, 146, 8],
+        "Effects of local delivery of d-\u00adamino acids from"
+      ],
+      [
+        [321.0, 177.0, 137, 8],
+        "biofilm-\u00addispersive scaffolds on infection in"
+      ],
+      [
+        [321.0, 189.0, 157, 8],
+        "contaminated rat segmental defects. Biomaterials"
+      ],
+      [[321.0, 201.0, 46, 8], "34:7533\u20137543."],
+      [
+        [310.0, 213.0, 184, 8],
+        "Santiago, C., K. H. Lim, H. S. Loh, and K. N. Ting. 2015a."
+      ],
+      [
+        [321.0, 224.0, 175, 8],
+        "Prevention of cell-\u00adsurface attachment and reduction of"
+      ],
+      [
+        [321.0, 236.0, 185, 8],
+        "penicillin-\u00adbinding protein 2a (PBP2a) level in methicillin-\u00ad"
+      ],
+      [
+        [321.0, 248.0, 166, 8],
+        "resistant Staphylococcus aureus biofilms by Acalypha"
+      ],
+      [
+        [321.0, 260.0, 163, 8],
+        "wilkesiana. BMC Complement. Altern. Med. 15:79."
+      ],
+      [
+        [310.0, 271.0, 185, 8],
+        "Santiago, C., K. H. Lim, H. S. Loh, and K. N. Ting. 2015b."
+      ],
+      [
+        [321.0, 283.0, 164, 8],
+        "Inhibitory effect of Duabanga grandiflora on MRSA"
+      ],
+      [
+        [321.0, 295.0, 152, 8],
+        "biofilm formation via prevention of cell-\u00adsurface"
+      ],
+      [[321.0, 307.0, 147, 8], "attachment and PBP2a production. Molecules"],
+      [[321.0, 318.0, 46, 8], "20:4473\u20134482."],
+      [
+        [310.0, 330.0, 189, 8],
+        "Sarabhai, S., P. Sharma, and N. Capalash. 2013. Ellagic acid"
+      ],
+      [
+        [321.0, 342.0, 191, 8],
+        "derivatives from Terminalia chebula Retz. downregulate the"
+      ],
+      [
+        [321.0, 354.0, 155, 8],
+        "expression of quorum sensing genes to attenuate"
+      ],
+      [
+        [321.0, 365.0, 197, 8],
+        "Pseudomonas aeruginosa PAO1 virulence. PLoS ONE 8:e5344."
+      ],
+      [
+        [310.0, 377.0, 166, 8],
+        "Schmidt, K. D., B. Tummler, and U. Romling. 1996."
+      ],
+      [
+        [321.0, 389.0, 187, 8],
+        "Comparative genome mapping of Pseudomonas aeruginosa"
+      ],
+      [
+        [321.0, 401.0, 167, 8],
+        "PAO with P. aeruginosa C, which belongs to a major"
+      ],
+      [
+        [321.0, 412.0, 166, 8],
+        "clone in cystic fibrosis patients and aquatic habitats."
+      ],
+      [[321.0, 424.0, 73, 8], "J. Bacteriol. 178:85\u201393."],
+      [
+        [310.0, 436.0, 179, 8],
+        "She, P., L. Chen, H. Liu, Y. Zou, Z. Luo, K. Asmaa, et al."
+      ],
+      [
+        [321.0, 448.0, 182, 8],
+        "2015. The effects of D-\u00adTyrosine combined with amikacin"
+      ],
+      [
+        [321.0, 459.0, 166, 8],
+        "on the biofilms of Pseudomonas aeruginosa. Microb."
+      ],
+      [[321.0, 471.0, 57, 8], "Pathog. 86:38\u201344."],
+      [
+        [310.0, 483.0, 170, 8],
+        "Shrout, J. D., D. L. Chopp, C. L. Just, M. Hentzer, M."
+      ],
+      [
+        [321.0, 495.0, 180, 8],
+        "Givskov, and M. R. Parsek. 2006. The impact of quorum"
+      ],
+      [[321.0, 506.0, 152, 8], "sensing and swarming motility on Pseudomonas"],
+      [
+        [321.0, 518.0, 183, 8],
+        "aeruginosa biofilm formation is nutritionally conditional."
+      ],
+      [[321.0, 530.0, 99, 8], "Mol. Microbiol. 62:1264\u20131277."],
+      [
+        [310.0, 542.0, 158, 8],
+        "Si, X., X. Quan, Q. Li, and Y. Wu. 2014. Effects of"
+      ],
+      [
+        [321.0, 553.0, 178, 8],
+        "d-\u00adamino acids and norspermidine on the disassembly of"
+      ],
+      [
+        [321.0, 565.0, 153, 8],
+        "large, old-a\u00adged microbial aggregates. Water Res."
+      ],
+      [[321.0, 577.0, 39, 8], "54:247\u2013253."],
+      [
+        [310.0, 589.0, 165, 8],
+        "Si, X., X. Quan, and Y. Wu. 2015. A small-\u00admolecule"
+      ],
+      [
+        [321.0, 600.0, 187, 8],
+        "norspermidine and norspermidine-\u00adhosting polyelectrolyte"
+      ],
+      [
+        [321.0, 612.0, 164, 8],
+        "coatings inhibit biofilm formation by multi-\u00adspecies"
+      ],
+      [
+        [321.0, 624.0, 156, 8],
+        "wastewater culture. Appl. Microbiol. Biotechnol."
+      ],
+      [[321.0, 636.0, 54, 8], "99:10861\u201310870."],
+      [
+        [310.0, 647.0, 184, 8],
+        "Tabor, C. W., and H. Tabor. 1984. Polyamines. Ann. Rev."
+      ],
+      [[321.0, 659.0, 71, 8], "Biochem. 53:749\u2013790."],
+      [[65.0, 729.0, 13, 9], "412"],
+      [
+        [323.0, 730.0, 198, 7],
+        "\u00a9 2016 The Authors. MicrobiologyOpen published by John Wiley & Sons Ltd."
+      ]
+    ],
+    [782, 595]
+  ],
+  [
+    2,
+    [
+      [[57.0, 42.0, 33, 8], "L. Qu et al."],
+      [
+        [356.0, 42.0, 163, 9],
+        "Effects of Norspermidine on P. aeruginosa Biofilm"
+      ],
+      [
+        [57.0, 71.0, 203, 9],
+        "morbidity, increased costs of treatment, and higher rates"
+      ],
+      [
+        [57.0, 83.0, 186, 9],
+        "of hospitalization (Costerton et al. 1999; Lister et al."
+      ],
+      [[57.0, 95.0, 23, 9], "2009)."],
+      [
+        [66.0, 107.0, 199, 9],
+        "Pseudomonas aeruginosa is a Gram-n\u00ad egative opportun-"
+      ],
+      [
+        [57.0, 119.0, 208, 9],
+        "istic pathogen commonly found in soil and water (Rahme"
+      ],
+      [
+        [57.0, 131.0, 193, 9],
+        "et al. 1995), capable of leading to various infections in"
+      ],
+      [
+        [57.0, 143.0, 207, 9],
+        "immunocompromised people, including bacteremia, sep-"
+      ],
+      [
+        [57.0, 155.0, 199, 9],
+        "sis, pneumonia, and wound and skin infections (Kipnis"
+      ],
+      [
+        [57.0, 167.0, 188, 9],
+        "et al. 2006). It is a clinically important opportunistic"
+      ],
+      [
+        [57.0, 179.0, 202, 9],
+        "pathogen responsible for 57% of total nosocomial infec-"
+      ],
+      [
+        [57.0, 191.0, 197, 9],
+        "tions (Sarabhai et al.2013). Besides the strong ability of"
+      ],
+      [
+        [57.0, 203.0, 199, 9],
+        "P. aeruginosa to form biofilms in environments renders"
+      ],
+      [
+        [57.0, 215.0, 208, 9],
+        "antibiotic treatments inefficient and lead to chronic infec-"
+      ],
+      [
+        [57.0, 227.0, 194, 9],
+        "tious disease (H\u00f8iby et al. 2010; Bjarnsholt 2013). The"
+      ],
+      [
+        [57.0, 239.0, 199, 9],
+        "pronounced ability of P. aeruginosa to develop biofilm-\u00ad"
+      ],
+      [
+        [57.0, 251.0, 197, 9],
+        "associated disease has drawn considerable interest over"
+      ],
+      [
+        [57.0, 263.0, 193, 9],
+        "the past decade in developing strategies to target their"
+      ],
+      [[57.0, 275.0, 45, 9], "disassembly."],
+      [
+        [66.0, 287.0, 171, 9],
+        "Since the increased resistance to antibiotics and"
+      ],
+      [
+        [57.0, 299.0, 196, 9],
+        "\u00adconventional treatment of bacteria in biofilms, finding"
+      ],
+      [
+        [57.0, 311.0, 191, 9],
+        "substances that can inhibit biofilm formation or trig-"
+      ],
+      [
+        [57.0, 323.0, 189, 9],
+        "ger mature biofilm disassembly attracts considerable"
+      ],
+      [[57.0, 335.0, 29, 9], "interest."],
+      [
+        [66.0, 347.0, 198, 9],
+        "Norspermidine, a kind of polyamine, is a small \u00adorganic"
+      ],
+      [
+        [57.0, 359.0, 196, 9],
+        "hydrocarbon that is positively charged at physiological"
+      ],
+      [
+        [57.0, 371.0, 196, 9],
+        "pH. Polyamines are pervasive at millimolar concentra-"
+      ],
+      [
+        [57.0, 383.0, 189, 9],
+        "tions in both eukaryotes and prokaryotes and are re-"
+      ],
+      [
+        [57.0, 395.0, 199, 9],
+        "quired for normal cell growth (Tabor and Tabor 1984)."
+      ],
+      [
+        [57.0, 407.0, 205, 9],
+        "Many research reported that norspermidine can enhance"
+      ],
+      [
+        [57.0, 419.0, 190, 9],
+        "Vibrio cholerae biofilm formation (Parker et al. 2012;"
+      ],
+      [
+        [57.0, 431.0, 181, 9],
+        "Karatan et al. 2005; McGinnis et al. 2009; Lee et al."
+      ],
+      [
+        [57.0, 443.0, 203, 9],
+        "2009). However, Kolodkin-G\u00ad al claimed that norspermi-"
+      ],
+      [
+        [57.0, 455.0, 208, 9],
+        "dine was identified from the supernatants of disassembled"
+      ],
+      [
+        [57.0, 467.0, 205, 9],
+        "biofilms and reported to mediate Bacillus subtilis (B. sub-"
+      ],
+      [
+        [57.0, 479.0, 204, 9],
+        "tilis) biofilm disassembly by interacting with exopolysac-"
+      ],
+      [
+        [57.0, 491.0, 204, 9],
+        "charide, but Kolodkin-\u00adGal\u2019s claims have been challenged"
+      ],
+      [
+        [57.0, 503.0, 187, 9],
+        "by Hobley et al. (2014). Even so, recent publications"
+      ],
+      [
+        [57.0, 515.0, 190, 9],
+        "have shown that norspermidine can prevent biofilms"
+      ],
+      [
+        [57.0, 527.0, 174, 9],
+        "formation by a diverse range of bacterial species,"
+      ],
+      [
+        [56.0, 539.0, 194, 9],
+        "\u00adincluding Staphylococcus aureus (B\u00f6ttcher et al. 2013),"
+      ],
+      [
+        [57.0, 551.0, 193, 9],
+        "Staphylococcus epidermidis (Ram\u00f3n-P\u00ader\u00e9z et al. 2015),"
+      ],
+      [
+        [57.0, 563.0, 185, 9],
+        "B. subtilis (B\u00f6ttcher et al. 2013), and Escherichia coli"
+      ],
+      [[57.0, 575.0, 68, 9], "(Nesse et al. 2015)."],
+      [
+        [66.0, 587.0, 192, 9],
+        "Norspermidine is able to inhibit biofilm formation in"
+      ],
+      [
+        [57.0, 599.0, 207, 9],
+        "some strains. However, to date there are no reports about"
+      ],
+      [
+        [57.0, 611.0, 214, 9],
+        "the effect of norspermidine on P. aeruginosa clinical strains."
+      ],
+      [
+        [57.0, 623.0, 199, 9],
+        "The aim of the present study was to investigate whether"
+      ],
+      [
+        [57.0, 635.0, 207, 9],
+        "the norspermidine may have potential as biofilm control-"
+      ],
+      [
+        [57.0, 647.0, 213, 9],
+        "ling substances against potentially pathogenic P. aeruginosa"
+      ],
+      [
+        [57.0, 659.0, 196, 9],
+        "both in standard strain PAO1 and clinical isolates. The"
+      ],
+      [
+        [57.0, 671.0, 209, 9],
+        "mechanism(s) of interactions were investigated via micro-"
+      ],
+      [
+        [57.0, 683.0, 206, 9],
+        "titer attachment assay, motility assays, and real-t\u00adime PCR"
+      ],
+      [[57.0, 695.0, 30, 9], "(qPCR)."],
+      [[302.0, 74.0, 132, 12], "Materials and Methods"],
+      [[302.0, 99.0, 165, 11], "Bacterial strains and growth media"],
+      [
+        [302.0, 118.0, 203, 9],
+        "Pseudomonas aeruginosa strain PAO1 (ATCC 15692) is a"
+      ],
+      [
+        [302.0, 130.0, 217, 9],
+        "well-\u00adcharacterized wound isolate widely used as a laboratory"
+      ],
+      [
+        [302.0, 142.0, 202, 9],
+        "strain (Holloway 1955; Schmidt et al. 1996). The clinical"
+      ],
+      [
+        [302.0, 154.0, 203, 9],
+        "isolates utilized in this study were selected from a collec-"
+      ],
+      [
+        [302.0, 166.0, 195, 9],
+        "tion of clinical isolates of P. aeruginosa during January"
+      ],
+      [
+        [302.0, 178.0, 202, 9],
+        "2014 to December 2014 (She et al. 2015) from the Third"
+      ],
+      [
+        [302.0, 190.0, 200, 9],
+        "Xangya hospital of Centre South University (Changsha,"
+      ],
+      [
+        [302.0, 202.0, 210, 9],
+        "Hunan, China). No special ethical permit was required for"
+      ],
+      [
+        [302.0, 214.0, 214, 9],
+        "this study according to the Chinese law. Pure stock cultures"
+      ],
+      [
+        [302.0, 226.0, 211, 9],
+        "were maintained at \u221280\u00b0C in 30% (vol/vol) frozen glycerol"
+      ],
+      [
+        [302.0, 238.0, 210, 9],
+        "solution. For planktonic growth, PAO1 and clinical strains"
+      ],
+      [
+        [302.0, 250.0, 210, 9],
+        "of P. aeruginosa were cultured in Luria\u2013Bertani broth (LB)"
+      ],
+      [
+        [302.0, 262.0, 199, 9],
+        "at 37\u00b0C. Bacteria were subcultured on blood agar plates"
+      ],
+      [
+        [302.0, 274.0, 207, 9],
+        "overnight at 37\u00b0C. LB broth was used for bacterial culture"
+      ],
+      [
+        [302.0, 286.0, 218, 9],
+        "in all experiments unless otherwise specified. Norspermidine"
+      ],
+      [
+        [302.0, 298.0, 210, 9],
+        "(Sigma-A\u00ad ldrich, St. Louis, MO) was used, and neutralized"
+      ],
+      [
+        [302.0, 310.0, 197, 9],
+        "when necessary with NaOH (1 mol/L) (pH 7\u20137.4). The"
+      ],
+      [
+        [302.0, 322.0, 203, 9],
+        "absorbance (A) or optical densities (OD) were measured"
+      ],
+      [[302.0, 334.0, 149, 9], "by a spectrophotometer (Bio-T\u00ad ek, USA)."],
+      [[302.0, 363.0, 190, 11], "Minimum inhibitory concentration (MIC)"],
+      [[302.0, 375.0, 190, 11], "and minimum bactericidal concentration"],
+      [[302.0, 387.0, 56, 11], "(MBC) assay"],
+      [
+        [302.0, 406.0, 207, 9],
+        "The MIC was determined for norspermidine by the broth"
+      ],
+      [
+        [302.0, 418.0, 194, 9],
+        "dilution method (Cha et al. 2007) and was carried out"
+      ],
+      [
+        [302.0, 430.0, 206, 9],
+        "in triplicate. The antibacterial activity was examined after"
+      ],
+      [
+        [302.0, 442.0, 201, 9],
+        "incubation at 37\u00b0C for 16\u201318 h. MIC was determined as"
+      ],
+      [
+        [302.0, 454.0, 200, 9],
+        "the lowest concentration of test samples that resulted in"
+      ],
+      [
+        [302.0, 466.0, 208, 9],
+        "a complete inhibition of visible growth in the broth. MBC"
+      ],
+      [
+        [302.0, 478.0, 202, 9],
+        "was determined on the basis of the lowest concentration"
+      ],
+      [
+        [302.0, 490.0, 199, 9],
+        "of norspermidine that kills 99.9% of the test bacteria by"
+      ],
+      [[302.0, 502.0, 121, 9], "plating out onto blood agar plate."],
+      [[302.0, 531.0, 105, 11], "Planktonic cell growth"],
+      [
+        [302.0, 550.0, 214, 9],
+        "The planktonic cell growth assay was modified from Huang"
+      ],
+      [
+        [302.0, 562.0, 182, 9],
+        "and Li as described previously (Huang et al. 2014)."
+      ],
+      [
+        [302.0, 574.0, 210, 9],
+        "Overnight-\u00adgrown PAO1 cells (OD630 was adjusted to 0.5)"
+      ],
+      [
+        [302.0, 586.0, 194, 9],
+        "were diluted 1:100 in LB with 0, 4, 5, 6, and 7 mmol/L"
+      ],
+      [
+        [302.0, 598.0, 206, 9],
+        "norspermidine. These samples were then grown in 50 mL"
+      ],
+      [
+        [302.0, 610.0, 193, 9],
+        "centrifugal tubes (Corning/Costar, USA) at 37\u00b0C with"
+      ],
+      [
+        [302.0, 622.0, 191, 9],
+        "agitation (160 rpm) and every hour aliquot of 150 \u03bcL"
+      ],
+      [
+        [302.0, 634.0, 211, 9],
+        "supernatant was carefully transferred to another microtiter"
+      ],
+      [
+        [302.0, 646.0, 208, 9],
+        "plate. The planktonic culture turbidity was read at OD630"
+      ],
+      [[302.0, 658.0, 95, 9], "by the spectrophotometer."],
+      [
+        [311.0, 670.0, 195, 9],
+        "To detect the CFU of PAO1 with norspermidine treat-"
+      ],
+      [
+        [302.0, 682.0, 215, 9],
+        "ment, overnight-g\u00adrown PAO1 cells were diluted 1:100 in LB"
+      ],
+      [
+        [302.0, 694.0, 198, 9],
+        "with 0, 4, 5, 6, and 8 mmol/L norspermidine. Triplicate"
+      ],
+      [
+        [57.0, 730.0, 198, 7],
+        "\u00a9 2016 The Authors. MicrobiologyOpen published by John Wiley & Sons Ltd."
+      ],
+      [[516.0, 729.0, 13, 9], "403"]
+    ],
+    [782, 595]
+  ],
+  [
+    3,
+    [
+      [
+        [65.0, 42.0, 163, 9],
+        "Effects of Norspermidine on P. aeruginosa Biofilm"
+      ],
+      [[503.0, 42.0, 33, 8], "L. Qu et al."],
+      [
+        [65.0, 71.0, 211, 9],
+        "samples were grown in the 50 mL centrifugal tubes at 37\u00b0C"
+      ],
+      [
+        [65.0, 83.0, 209, 9],
+        "with agitation (160 rpm) and every hour aliquot of 100 \u03bcL"
+      ],
+      [
+        [65.0, 95.0, 200, 9],
+        "supernatant was diluted in saline (0.9% NaCl) at an ap-"
+      ],
+      [
+        [65.0, 107.0, 212, 9],
+        "propriate dilution and spiral plated on blood agar plates by"
+      ],
+      [
+        [65.0, 119.0, 215, 9],
+        "a glass rod. The plates were incubated for 24 h, and colonies"
+      ],
+      [
+        [65.0, 131.0, 197, 9],
+        "were counted. The number of CFU/mL was calculated."
+      ],
+      [[65.0, 160.0, 104, 11], "Biofilm determination"],
+      [
+        [65.0, 179.0, 212, 9],
+        "To detect the inhibitory effect of norspermidine on biofilm"
+      ],
+      [
+        [65.0, 191.0, 202, 9],
+        "formation of PAO1, the semiquantitative determination"
+      ],
+      [
+        [65.0, 203.0, 201, 9],
+        "of biofilm formation was performed in microtiter plates"
+      ],
+      [
+        [65.0, 215.0, 210, 9],
+        "as described earlier, with minor modifications (Nesse et al."
+      ],
+      [
+        [65.0, 227.0, 206, 9],
+        "2015). About 4 \u03bcL culture and 196 \u03bcL LB with or without"
+      ],
+      [
+        [65.0, 239.0, 198, 9],
+        "the norspermidine to be tested were added to each well"
+      ],
+      [
+        [65.0, 251.0, 209, 9],
+        "in 96-\u00adwell cell culture plates (Corning/Costar, USA). After"
+      ],
+      [
+        [65.0, 263.0, 208, 9],
+        "incubation at 37\u00b0C for 24 h, the plates were washed gently"
+      ],
+      [
+        [65.0, 275.0, 197, 9],
+        "with 0.9% saline, dried for 30 min at 37\u00b0C, and stained"
+      ],
+      [
+        [65.0, 287.0, 209, 9],
+        "with 200 \u03bcL 0.5% (w/v) crystal violet solution. After stain-"
+      ],
+      [
+        [65.0, 299.0, 198, 9],
+        "ing, the plates were washed with the saline, 200 \u03bcL 95%"
+      ],
+      [
+        [65.0, 311.0, 203, 15],
+        "ethanol was added to dissolve stained dye, and OD570 nm"
+      ],
+      [
+        [65.0, 323.0, 204, 9],
+        "of the adhered and stained cells were measured using the"
+      ],
+      [
+        [65.0, 335.0, 204, 9],
+        "spectrophotometer. Tests were performed in triplicate in"
+      ],
+      [[65.0, 347.0, 141, 9], "at least three independent experiments."],
+      [
+        [75.0, 359.0, 201, 9],
+        "For the mature biofilm disassembly valuation, primarily"
+      ],
+      [
+        [65.0, 371.0, 201, 9],
+        "the mature biofilm was allowed to form as follow: a vol-"
+      ],
+      [
+        [65.0, 383.0, 208, 9],
+        "ume of 100 \u03bcL of 1:200 diluted overnight bacterial culture"
+      ],
+      [
+        [65.0, 395.0, 188, 9],
+        "was added to a 96-\u00adwell cell culture plate with LB and"
+      ],
+      [
+        [65.0, 407.0, 199, 9],
+        "the plate was incubated at 37\u00b0C for 24 h. Later the wells"
+      ],
+      [
+        [65.0, 419.0, 193, 9],
+        "were washed with 0.9% saline and norspermidine was"
+      ],
+      [
+        [65.0, 431.0, 212, 9],
+        "incorporated into LB to different concentrations. The plate"
+      ],
+      [
+        [65.0, 443.0, 194, 9],
+        "was incubated for another 24 h and biofilm formation"
+      ],
+      [[65.0, 455.0, 130, 9], "was determined as described earlier."],
+      [[65.0, 484.0, 173, 11], "Biofilms on urinary catheter surfaces"],
+      [
+        [65.0, 503.0, 204, 9],
+        "There is currently no standardized method for the detec-"
+      ],
+      [
+        [65.0, 515.0, 206, 9],
+        "tion and analysis of biofilms on urinary catheter surfaces."
+      ],
+      [
+        [65.0, 527.0, 198, 9],
+        "The silicone Foley\u2019s catheter (Medtrue, Jiangsu, China)"
+      ],
+      [
+        [65.0, 539.0, 207, 9],
+        "was carefully cut into 10-\u00admm long pipes, and disinfection"
+      ],
+      [
+        [65.0, 551.0, 192, 9],
+        "was performed by soaking them into 75% ethanol for"
+      ],
+      [
+        [65.0, 563.0, 197, 9],
+        "30 min, followed by successive washes of the inner and"
+      ],
+      [
+        [65.0, 575.0, 191, 9],
+        "outer surface with distilled water using a syringe with"
+      ],
+      [
+        [65.0, 587.0, 189, 9],
+        "the tip of the needle at the upper end of the catheter."
+      ],
+      [[65.0, 599.0, 123, 9], "Once dried, the pipes can be used."],
+      [[65.0, 628.0, 132, 11], "Microtiter attachment assay"],
+      [
+        [65.0, 647.0, 199, 9],
+        "Experiment was conducted based on the method previ-"
+      ],
+      [
+        [65.0, 659.0, 187, 9],
+        "ously described by Santiago and Lim (Santiago et al."
+      ],
+      [
+        [65.0, 671.0, 214, 9],
+        "2015a,b). A 96-\u00adwell microtiter plate (Corning/Costar, USA)"
+      ],
+      [
+        [65.0, 683.0, 198, 9],
+        "was prepared with norspermidine at the following con-"
+      ],
+      [
+        [65.0, 695.0, 196, 9],
+        "centrations: 0, 2, 2.5, 3, 3.5, and 4 mmol/L. Aliquots of"
+      ],
+      [
+        [310.0, 71.0, 201, 9],
+        "PAO1 suspension (adjust to 0.5 McFarland) were added"
+      ],
+      [
+        [310.0, 83.0, 195, 9],
+        "to these wells. The plate was incubated for 2 h at 37\u00b0C."
+      ],
+      [
+        [310.0, 95.0, 201, 9],
+        "Following incubation, the wells were washed with saline"
+      ],
+      [
+        [310.0, 107.0, 207, 9],
+        "and biomass of cell attachment was determined by crystal"
+      ],
+      [[310.0, 119.0, 154, 9], "violet staining method as described earlier."],
+      [[310.0, 148.0, 119, 11], "Swimming motility assay"],
+      [
+        [310.0, 167.0, 193, 9],
+        "The motility assay was performed as described earlier,"
+      ],
+      [
+        [310.0, 179.0, 200, 9],
+        "with minor modifications (Rashid and Kornberg 2000)."
+      ],
+      [
+        [310.0, 191.0, 199, 9],
+        "Media used for assay was LB broth that contained 0.3%"
+      ],
+      [
+        [310.0, 203.0, 202, 9],
+        "(wt/vol) agarose. Swimming plates were inoculated with"
+      ],
+      [
+        [310.0, 215.0, 197, 9],
+        "bacteria from an overnight culture in blood agar plates"
+      ],
+      [
+        [310.0, 227.0, 190, 9],
+        "at 37\u00b0C with a sterile toothpick. The plates were then"
+      ],
+      [[310.0, 239.0, 97, 9], "incubated at 30\u00b0C for 14 h."],
+      [[310.0, 268.0, 118, 11], "Gene expression analysis"],
+      [
+        [310.0, 287.0, 192, 9],
+        "The qRT-P\u00adCR assay was modified from Maisuria and"
+      ],
+      [
+        [310.0, 299.0, 218, 9],
+        "Hosseinidoust as described previously (Maisuria et al. 2015)."
+      ],
+      [
+        [310.0, 311.0, 199, 15],
+        "Bacterial cells were grown to an OD630 of 0.5\u20130.8 (10 h,"
+      ],
+      [
+        [310.0, 323.0, 209, 9],
+        "37\u00b0C, 150 rpm) in LB broth with or without subinhibitory"
+      ],
+      [
+        [310.0, 335.0, 214, 9],
+        "(4 mmol/L) norspermidine. Total RNA was extracted using"
+      ],
+      [
+        [310.0, 347.0, 199, 9],
+        "a E.Z.N.A. Total RNA Kit II (Omega Bio-t\u00adek, Norcross,"
+      ],
+      [
+        [310.0, 359.0, 209, 9],
+        "GA). RNA concentration was quantified by measuring the"
+      ],
+      [
+        [310.0, 371.0, 195, 9],
+        "absorbance of the sample at 260 and 280 nm, and 1 \u03bcL"
+      ],
+      [
+        [310.0, 383.0, 212, 9],
+        "of RNA was used for cDNA synthesis using the TransScript"
+      ],
+      [
+        [310.0, 395.0, 221, 9],
+        "All-i\u00adn-\u00adOne First-S\u00ad trand cDNA Synthesis SuperMix for qPCR"
+      ],
+      [
+        [310.0, 407.0, 212, 9],
+        "(Transgene, Beijing, China). Expression of target genes was"
+      ],
+      [
+        [310.0, 419.0, 221, 9],
+        "quantified using qRT-P\u00ad CR with the synthesized cDNA. qRT-\u00ad"
+      ],
+      [
+        [310.0, 431.0, 222, 9],
+        "PCR was performed with a real-t\u00adime quantitative PCR system"
+      ],
+      [
+        [310.0, 443.0, 199, 9],
+        "(Eppendorf, Germany) using TransStart\u2122 Green qPCR"
+      ],
+      [
+        [310.0, 455.0, 216, 9],
+        "SuperMix UDG (Transgene, Beijing, China). Conditions for"
+      ],
+      [
+        [310.0, 467.0, 201, 9],
+        "qRT-\u00adPCR were the following: 50\u00b0C for 2 min, initial de-"
+      ],
+      [
+        [310.0, 479.0, 196, 9],
+        "naturation at 94\u00b0C for 10 min, and 40 cycles of 5 sec at"
+      ],
+      [
+        [310.0, 491.0, 204, 9],
+        "94\u00b0C and 30sec at 60\u00b0C. Data were normalized to the en-"
+      ],
+      [
+        [310.0, 503.0, 202, 9],
+        "dogenous reference gene of P. aeruginosa. The threshold"
+      ],
+      [
+        [310.0, 513.0, 213, 15],
+        "cycle method (2\u2212\u0394\u0394CT) was used to analyze changes in gene"
+      ],
+      [
+        [310.0, 527.0, 199, 9],
+        "expression in a given sample relative to the control. For"
+      ],
+      [
+        [310.0, 539.0, 212, 9],
+        "each sample of cells, qRT-P\u00ad CR was performed in triplicate"
+      ],
+      [
+        [310.0, 551.0, 201, 9],
+        "and the entire e\u00adxperiment was repeated twice with RNA"
+      ],
+      [
+        [310.0, 563.0, 214, 9],
+        "samples extracted from independent cultures. The reported"
+      ],
+      [
+        [310.0, 575.0, 213, 9],
+        "oligonucleotide primer sequences (Kim et al. 2015a,b) used"
+      ],
+      [
+        [310.0, 587.0, 185, 9],
+        "to amplify the genes of interest are listed in Table 1."
+      ],
+      [
+        [310.0, 616.0, 189, 11],
+        "Analysis of the production of QS-\u00adrelated"
+      ],
+      [[310.0, 628.0, 78, 11], "virulence factors"],
+      [
+        [310.0, 647.0, 200, 9],
+        "Overnight culture of P. aeruginosa was inoculated in LB"
+      ],
+      [
+        [310.0, 659.0, 196, 9],
+        "broth with or without norspermidine (0, 2, 4 mmol/L)"
+      ],
+      [
+        [310.0, 671.0, 201, 9],
+        "and incubated at 37\u00b0C for 16 h at 150 rpm. As described"
+      ],
+      [
+        [310.0, 683.0, 204, 9],
+        "earlier (Sarabhai et al. 2013), pyocyanin pigment was ex-"
+      ],
+      [
+        [310.0, 695.0, 214, 9],
+        "tracted from culture supernatant by chloroform in the ratio"
+      ],
+      [[65.0, 729.0, 13, 9], "404"],
+      [
+        [323.0, 730.0, 198, 7],
+        "\u00a9 2016 The Authors. MicrobiologyOpen published by John Wiley & Sons Ltd."
+      ]
+    ],
+    [782, 595]
+  ],
+  [
+    4,
+    [
+      [[57.0, 42.0, 33, 8], "L. Qu et al."],
+      [
+        [356.0, 42.0, 163, 9],
+        "Effects of Norspermidine on P. aeruginosa Biofilm"
+      ],
+      [[57.0, 71.0, 105, 9], "Table 1. Primers used in this study."],
+      [[57.0, 90.0, 38, 8], "Primer name"],
+      [[125.0, 90.0, 16, 8], "Gene"],
+      [
+        [203.0, 90.0, 104, 9],
+        "Oligonucleotide sequences (5\u2032\u21923\u2032)"
+      ],
+      [[57.0, 109.0, 17, 8], "lasR-\u00adF"],
+      [[57.0, 119.0, 18, 8], "lasR-\u00adR"],
+      [[57.0, 129.0, 15, 8], "lasI-\u00adF"],
+      [[57.0, 140.0, 16, 8], "lasI-\u00adR"],
+      [[57.0, 150.0, 17, 8], "rhlR-\u00adF"],
+      [[57.0, 160.0, 18, 8], "rhlR-\u00adR"],
+      [[57.0, 171.0, 15, 8], "rhlI-\u00adF"],
+      [[57.0, 181.0, 16, 8], "rhlI-\u00adR"],
+      [[57.0, 192.0, 21, 8], "mvfR-\u00adF"],
+      [[57.0, 202.0, 21, 8], "mvfR-\u00adR"],
+      [[57.0, 212.0, 20, 8], "proC-\u00adF"],
+      [[57.0, 223.0, 21, 8], "proC-\u00adR"],
+      [[125.0, 109.0, 12, 8], "lasR"],
+      [[125.0, 119.0, 12, 8], "lasR"],
+      [[125.0, 129.0, 9, 8], "lasI"],
+      [[125.0, 140.0, 9, 8], "lasI"],
+      [[125.0, 150.0, 12, 8], "rhlR"],
+      [[125.0, 160.0, 12, 8], "rhlR"],
+      [[125.0, 171.0, 9, 8], "rhlI"],
+      [[125.0, 181.0, 9, 8], "rhlI"],
+      [[125.0, 192.0, 15, 8], "mvfR"],
+      [[125.0, 202.0, 15, 8], "mvfR"],
+      [[125.0, 211.0, 17, 13], "proC1"],
+      [[126.0, 221.0, 17, 13], "proC1"],
+      [[203.0, 109.0, 91, 8], "ACGCTCAAGTGGAAAATTGG"],
+      [[203.0, 119.0, 91, 8], "GTAGATGGACGGTTCCCAGA"],
+      [[203.0, 129.0, 93, 8], "CTACAGCCTGCAGAACGACA"],
+      [[203.0, 140.0, 88, 8], "ATCTGGGTCTTGGCATTGAG"],
+      [[203.0, 150.0, 89, 8], "AGGAATGACGGAGGCTTTTT"],
+      [[203.0, 160.0, 87, 8], "CCCGTAGTTCTGCATCTGGT"],
+      [[203.0, 171.0, 90, 8], "CTCTCTGAATCGCTGGAAGG"],
+      [[203.0, 181.0, 92, 8], "GACGTCCTTGAGCAGGTAGG"],
+      [[203.0, 192.0, 91, 8], "AACCTGGAAATCGACCTGTG"],
+      [[203.0, 202.0, 91, 8], "TGAAATCGTCGAGCAGTACG"],
+      [[204.0, 212.0, 86, 8], "GGCGTATTTCTTCCTGCTGA"],
+      [[204.0, 223.0, 88, 8], "CCTGCTCCACTAGTGCTTCG"],
+      [[57.0, 237.0, 132, 13], "1Housekeeping genes (endogenous control)."],
+      [[348.0, 90.0, 23, 8], "Tm (\u00b0C)"],
+      [[348.0, 109.0, 18, 8], "60.11"],
+      [[348.0, 119.0, 18, 8], "59.93"],
+      [[348.0, 129.0, 18, 8], "60.20"],
+      [[348.0, 140.0, 18, 8], "60.07"],
+      [[348.0, 150.0, 18, 8], "60.07"],
+      [[348.0, 160.0, 18, 8], "60.13"],
+      [[348.0, 171.0, 18, 8], "60.09"],
+      [[348.0, 181.0, 18, 8], "59.87"],
+      [[348.0, 192.0, 18, 8], "59.97"],
+      [[348.0, 202.0, 18, 8], "60.01"],
+      [[348.0, 212.0, 18, 8], "60.35"],
+      [[348.0, 223.0, 18, 8], "61.12"],
+      [[410.0, 90.0, 17, 8], "GC%"],
+      [[410.0, 109.0, 18, 8], "45.00"],
+      [[410.0, 119.0, 18, 8], "55.00"],
+      [[410.0, 129.0, 18, 8], "55.00"],
+      [[410.0, 140.0, 18, 8], "50.00"],
+      [[410.0, 150.0, 18, 8], "45.00"],
+      [[410.0, 160.0, 18, 8], "55.00"],
+      [[410.0, 171.0, 18, 8], "55.00"],
+      [[410.0, 181.0, 18, 8], "60.00"],
+      [[410.0, 192.0, 18, 8], "50.00"],
+      [[410.0, 202.0, 18, 8], "50.00"],
+      [[410.0, 212.0, 18, 8], "50.00"],
+      [[410.0, 223.0, 18, 8], "60.00"],
+      [[475.0, 90.0, 49, 8], "Product size (bp)"],
+      [[475.0, 109.0, 12, 8], "247"],
+      [[475.0, 129.0, 12, 8], "168"],
+      [[475.0, 150.0, 12, 8], "231"],
+      [[475.0, 171.0, 12, 8], "240"],
+      [[475.0, 192.0, 12, 8], "238"],
+      [[475.0, 212.0, 12, 8], "236"],
+      [
+        [57.0, 264.0, 206, 9],
+        "of 3:2 and re-e\u00adxtracted with 1.0 mL of 0.2 mol/L HCl and"
+      ],
+      [
+        [57.0, 276.0, 212, 9],
+        "absorbance was read at 540 nm. For assaying elastase activ-"
+      ],
+      [
+        [57.0, 288.0, 199, 9],
+        "ity, 250 \u03bcL elastin Congo red solution (5 mg/mL, pH 8)"
+      ],
+      [
+        [57.0, 300.0, 200, 9],
+        "was incubated with 750 \u03bcL cell-f\u00adree supernatant at 37\u00b0C"
+      ],
+      [
+        [57.0, 312.0, 209, 9],
+        "for 16 h at 200 rpm. The mixture was centrifuged at 3000g"
+      ],
+      [
+        [57.0, 324.0, 219, 9],
+        "for 10 min and absorbance was read at 490 nm. For a\u00ad ssaying"
+      ],
+      [
+        [57.0, 336.0, 215, 9],
+        "protease activity, azocasein solution (2%, pH 7) and culture"
+      ],
+      [
+        [57.0, 348.0, 196, 9],
+        "supernatant were incubated at 37\u00b0C in 1:1 ratio for 1 h"
+      ],
+      [
+        [57.0, 360.0, 206, 9],
+        "in a reaction volume of 400 \u03bcL. The reaction was stopped"
+      ],
+      [
+        [57.0, 372.0, 205, 9],
+        "by the addition of 500 \u03bcL of 10% trichloroacetic acid and"
+      ],
+      [
+        [57.0, 384.0, 216, 9],
+        "centrifuged at 8000g for 5 min to remove residual azocasein."
+      ],
+      [
+        [57.0, 396.0, 185, 9],
+        "The absorbance of supernatant was read at 400 nm."
+      ],
+      [[57.0, 425.0, 191, 11], "Effect of norspermidine on PAO1 biofilm"],
+      [[57.0, 437.0, 58, 11], "morphology"],
+      [
+        [57.0, 456.0, 213, 9],
+        "PAO1 biofilms developed in the presence of norspermidine"
+      ],
+      [
+        [57.0, 468.0, 199, 9],
+        "on glass covers for 12 h or 24 h were washed with saline"
+      ],
+      [
+        [57.0, 480.0, 201, 9],
+        "and stained with crystal violet. After air drying, the glass"
+      ],
+      [
+        [57.0, 492.0, 185, 9],
+        "covers were immediately processed for observation."
+      ],
+      [
+        [57.0, 504.0, 199, 9],
+        "Morphology of PAO1 in untreated and norspermidine-\u00ad"
+      ],
+      [
+        [57.0, 516.0, 204, 9],
+        "treated biofilm was visualized and photographed with an"
+      ],
+      [
+        [57.0, 528.0, 191, 9],
+        "Olympus CX31 light microscope (Tokyo, Japan). For"
+      ],
+      [
+        [57.0, 540.0, 207, 9],
+        "mature biofilm disassembly valuation, 24-h\u00ad biofilms were"
+      ],
+      [
+        [57.0, 552.0, 202, 9],
+        "treated with or without norspermidine for another 24 h,"
+      ],
+      [[57.0, 564.0, 163, 9], "and were photographed with the microscope."],
+      [[57.0, 593.0, 169, 11], "Scanning electron microscope (SEM)"],
+      [
+        [57.0, 612.0, 201, 9],
+        "The bacterial biofilms colonizing the surfaces of the uri-"
+      ],
+      [
+        [57.0, 624.0, 187, 9],
+        "nary catheters or cover glass were examined by SEM"
+      ],
+      [
+        [57.0, 636.0, 202, 9],
+        "analysis. Sterile silicone Foley\u2019s catheters were gently cut"
+      ],
+      [
+        [57.0, 648.0, 195, 9],
+        "into 1.0-c\u00adm small pipes. For biofilm eradication assay,"
+      ],
+      [
+        [57.0, 660.0, 196, 9],
+        "the pipes and cover slides were placed into six-\u00adwell cell"
+      ],
+      [
+        [57.0, 672.0, 184, 9],
+        "culture plates with 2 mL LB broth containing 40 \u03bcL"
+      ],
+      [
+        [57.0, 684.0, 212, 9],
+        "overnight-g\u00ad rown PAO1. After 24 h incubation, the culture"
+      ],
+      [
+        [57.0, 696.0, 199, 9],
+        "media was removed and the pipes and cover slides were"
+      ],
+      [
+        [302.0, 264.0, 195, 9],
+        "wash three times with 0.9% saline, then the pipes were"
+      ],
+      [
+        [302.0, 276.0, 200, 9],
+        "transferred to a new six-w\u00ad ell plates containing 2 mL LB"
+      ],
+      [
+        [302.0, 288.0, 201, 9],
+        "broth with or without norspermidine and incubated for"
+      ],
+      [
+        [302.0, 300.0, 208, 9],
+        "another 24 h. Then, the pipes and cover slides were rinsed"
+      ],
+      [
+        [302.0, 311.0, 202, 9],
+        "with saline and examined with SEM. Samples were fixed"
+      ],
+      [
+        [302.0, 323.0, 199, 9],
+        "in a 2% glutaraldehyde and 0.1 mol/L cacodylate buffer"
+      ],
+      [
+        [302.0, 335.0, 185, 9],
+        "(pH 7.4) for 30 min and then rinsed three times for"
+      ],
+      [
+        [302.0, 347.0, 190, 9],
+        "10 min each rinse in 0.2 mol/L cacodylate buffer (pH"
+      ],
+      [
+        [302.0, 359.0, 188, 9],
+        "7.4). Samples were then dehydrated by passing them"
+      ],
+      [
+        [302.0, 371.0, 193, 9],
+        "through the following ethanol series: 30%, 50%, 70%,"
+      ],
+      [
+        [302.0, 383.0, 190, 9],
+        "and 90% ethanol, each for 10 min, followed by 100%"
+      ],
+      [
+        [302.0, 395.0, 189, 9],
+        "ethanol twice for 10 min each time. Support samples"
+      ],
+      [
+        [302.0, 407.0, 197, 9],
+        "were then air dried in a desiccator for 24 h. After being"
+      ],
+      [
+        [302.0, 419.0, 214, 9],
+        "coated with gold-p\u00ad alladium, samples were examined under"
+      ],
+      [
+        [302.0, 431.0, 211, 9],
+        "a S-\u00ad3400N scanning electron m\u00ad icroscope (Hitachi, Japan)."
+      ],
+      [[302.0, 461.0, 87, 11], "Statistical analysis"],
+      [
+        [302.0, 480.0, 218, 9],
+        "All experiments were performed in duplicate and repeated at"
+      ],
+      [
+        [302.0, 492.0, 210, 9],
+        "least three times on different days. A two-\u00adtailed Student\u2019s t"
+      ],
+      [
+        [302.0, 504.0, 216, 9],
+        "test was used to determine whether the presence of norsper-"
+      ],
+      [
+        [302.0, 516.0, 219, 9],
+        "midine resulted in a significant difference compared to levels"
+      ],
+      [
+        [302.0, 528.0, 212, 9],
+        "for the control. A P < 0.05 was considered significant. Data"
+      ],
+      [
+        [302.0, 540.0, 218, 9],
+        "were analyzed using Graph Pad Prim 5.0 software (USA). All"
+      ],
+      [
+        [302.0, 552.0, 217, 9],
+        "results are expressed as the mean \u00b1 standard deviation (SD)."
+      ],
+      [[302.0, 580.0, 41, 12], "Results"],
+      [[302.0, 605.0, 179, 11], "Norspermidine inhibits planktonic cell"],
+      [[302.0, 617.0, 35, 11], "growth"],
+      [[302.0, 636.0, 173, 9], "The MIC and MBC of norspermidine were both"],
+      [
+        [302.0, 648.0, 211, 9],
+        "12.5 mmol/L. Norspermidine did not inhibit PAO1 kinetic"
+      ],
+      [
+        [302.0, 660.0, 207, 9],
+        "planktonic cell growth at the sub-\u00adMIC concentration that"
+      ],
+      [
+        [302.0, 672.0, 189, 9],
+        "is equal or less than 4 mmol/L (Fig. 1A). At the same"
+      ],
+      [
+        [302.0, 683.0, 199, 11],
+        "time, high dose of norspermidine (\u22656 mmol/L) showed"
+      ],
+      [
+        [302.0, 696.0, 207, 9],
+        "significant bactericide effect on planktonic cells, however,"
+      ],
+      [
+        [57.0, 730.0, 198, 7],
+        "\u00a9 2016 The Authors. MicrobiologyOpen published by John Wiley & Sons Ltd."
+      ],
+      [[516.0, 729.0, 13, 9], "405"]
+    ],
+    [782, 595]
+  ],
+  [
+    5,
+    [
+      [
+        [65.0, 42.0, 163, 9],
+        "Effects of Norspermidine on P. aeruginosa Biofilm"
+      ],
+      [[503.0, 42.0, 33, 8], "L. Qu et al."],
+      [
+        [65.0, 203.0, 437, 9],
+        "Figure 1. PAO1 planktonic cell growth with norspermidine. (A) Kinetic planktonic cell growth (optical density). Cells grown overnight were treated"
+      ],
+      [
+        [65.0, 213.0, 435, 13],
+        "with 0, 4, 5, 6, and 7 mmol/L norspermidine, and every 2 h cells were carefully transferred to another microtiter plate for total 18 h, and OD630 nm"
+      ],
+      [
+        [65.0, 224.0, 445, 8],
+        "was read. (B) Planktonic cell growth (CFU). PAO1 cells grown overnight were treated with 0, 4, 5, 6, and 8 mmol/L norspermidine, and every 2 h cells"
+      ],
+      [
+        [65.0, 234.0, 227, 8],
+        "were diluted and spiral plated on blood agar plates. Error bars represent SD."
+      ],
+      [[393.0, 419.0, 113, 9], "Figure 2. The effect of norspermidine"],
+      [[393.0, 429.0, 131, 8], "against PAO1 biofilm. (A) Biofilm formation."],
+      [[393.0, 440.0, 104, 8], "Overnight culture was treated with"],
+      [[393.0, 450.0, 121, 8], "0\u20135 mmol/L norspermidine for 24 h. The"],
+      [[393.0, 461.0, 132, 8], "volume of biofilm was determined by crystal"],
+      [[393.0, 471.0, 118, 8], "violet assay. Error bars represent SD. (B)"],
+      [[393.0, 482.0, 112, 8], "Biofilm eradication. Twenty-f\u00adour hour"],
+      [[393.0, 492.0, 120, 8], "mature biofilms were cultured overnight"],
+      [[393.0, 503.0, 112, 8], "with norspermidine at concentrations"],
+      [[393.0, 513.0, 108, 8], "ranging from 0 to 6 mmol/L and the"],
+      [[393.0, 524.0, 103, 8], "quantification of biofilm formation"],
+      [[393.0, 534.0, 132, 8], "determined by crystal violet assay. *P < 0.05"],
+      [
+        [393.0, 545.0, 135, 8],
+        "versus untreated control. Error bars represent"
+      ],
+      [[393.0, 555.0, 89, 8], "SD. (C) Representative images"],
+      [
+        [393.0, 566.0, 126, 8],
+        "(magnification, 10 \u00d7 100) of PAO1 biofilm"
+      ],
+      [[393.0, 576.0, 130, 8], "treated with norspermidine, and the effects"],
+      [[393.0, 587.0, 124, 8], "of norspermidine were assessed by crystal"],
+      [[393.0, 597.0, 43, 8], "violet staining."],
+      [
+        [65.0, 623.0, 208, 11],
+        "\u22644 mmol/L norspermidine did not show bactericide effect"
+      ],
+      [[65.0, 636.0, 117, 9], "on the planktonic cells (Fig. 1B)."],
+      [[65.0, 665.0, 168, 11], "Antibiofilm effect of norspermidine"],
+      [
+        [65.0, 684.0, 202, 9],
+        "To evaluate the potential clinical application of norsper-"
+      ],
+      [
+        [65.0, 696.0, 188, 9],
+        "midine, we tested whether norspermidine effectively"
+      ],
+      [
+        [310.0, 624.0, 195, 9],
+        "inhibited biofilm formation or eradicated 24 h mature"
+      ],
+      [
+        [310.0, 636.0, 207, 9],
+        "biofilms of standard strain PAO1 (Fig. 2A\u2013C) and clinical"
+      ],
+      [
+        [310.0, 648.0, 209, 9],
+        "isolates (Table 2). The effect of norspermidine on biofilms"
+      ],
+      [
+        [310.0, 660.0, 206, 9],
+        "was evaluated by crystal violet assay. Biofilm biomass was"
+      ],
+      [[310.0, 672.0, 148, 9], "checked by taking absorbance at 570 nm."],
+      [
+        [320.0, 684.0, 188, 9],
+        "Inhibitory activities of norspernidine on PAO1 were"
+      ],
+      [
+        [310.0, 696.0, 199, 9],
+        "dose dependent. Norspermidine significantly decreased"
+      ],
+      [[65.0, 729.0, 13, 9], "406"],
+      [
+        [323.0, 730.0, 198, 7],
+        "\u00a9 2016 The Authors. MicrobiologyOpen published by John Wiley & Sons Ltd."
+      ]
+    ],
+    [782, 595]
+  ],
+  [
+    6,
+    [
+      [[57.0, 42.0, 33, 8], "L. Qu et al."],
+      [
+        [356.0, 42.0, 163, 9],
+        "Effects of Norspermidine on P. aeruginosa Biofilm"
+      ],
+      [
+        [57.0, 71.0, 244, 9],
+        "Table 2. Effects of norspermidine on clinical isolates of Pseudomonas aeruginosa."
+      ],
+      [[223.0, 89.0, 40, 13], "% Inhibition1"],
+      [[405.0, 89.0, 48, 13], "% Disassembly2"],
+      [[57.0, 108.0, 45, 8], "Clinical isolates"],
+      [[141.0, 108.0, 48, 13], "Biofilm (A570 nm)"],
+      [[223.0, 108.0, 28, 8], "5 mmol/L"],
+      [[317.0, 108.0, 32, 8], "10 mmol/L"],
+      [[405.0, 108.0, 32, 8], "10 mmol/L"],
+      [[493.0, 108.0, 32, 8], "25 mmol/L"],
+      [[57.0, 126.0, 16, 8], "PA01"],
+      [[57.0, 137.0, 16, 8], "PA02"],
+      [[57.0, 147.0, 16, 8], "PA04"],
+      [[57.0, 158.0, 16, 8], "PA08"],
+      [[57.0, 168.0, 16, 8], "PA10"],
+      [[57.0, 178.0, 16, 8], "PA16"],
+      [[57.0, 189.0, 16, 8], "PA29"],
+      [[57.0, 199.0, 16, 8], "PA30"],
+      [[57.0, 209.0, 16, 8], "PA32"],
+      [[57.0, 220.0, 16, 8], "PA38"],
+      [[57.0, 230.0, 16, 8], "PA40"],
+      [[57.0, 241.0, 16, 8], "PA41"],
+      [[57.0, 251.0, 16, 8], "PA47"],
+      [[57.0, 261.0, 16, 8], "PA49"],
+      [[57.0, 272.0, 16, 8], "PA52"],
+      [[57.0, 282.0, 16, 8], "PA58"],
+      [[57.0, 293.0, 16, 8], "PA60"],
+      [[57.0, 303.0, 16, 8], "PA62"],
+      [[57.0, 313.0, 16, 8], "PA68"],
+      [[57.0, 324.0, 16, 8], "PA71"],
+      [[141.0, 126.0, 18, 8], "1.058"],
+      [[141.0, 137.0, 18, 8], "1.050"],
+      [[141.0, 147.0, 18, 8], "1.174"],
+      [[141.0, 158.0, 18, 8], "0.319"],
+      [[141.0, 168.0, 18, 8], "0.999"],
+      [[141.0, 178.0, 18, 8], "1.006"],
+      [[141.0, 189.0, 18, 8], "1.333"],
+      [[141.0, 199.0, 18, 8], "1.507"],
+      [[141.0, 209.0, 18, 8], "1.505"],
+      [[141.0, 220.0, 18, 8], "1.495"],
+      [[141.0, 230.0, 18, 8], "1.138"],
+      [[141.0, 241.0, 18, 8], "1.900"],
+      [[141.0, 251.0, 18, 8], "2.372"],
+      [[141.0, 261.0, 18, 8], "0.488"],
+      [[142.0, 272.0, 18, 8], "1.966"],
+      [[142.0, 282.0, 18, 8], "0.331"],
+      [[142.0, 293.0, 18, 8], "1.629"],
+      [[142.0, 303.0, 18, 8], "1.806"],
+      [[142.0, 313.0, 18, 8], "1.861"],
+      [[142.0, 324.0, 18, 8], "1.878"],
+      [[227.0, 126.0, 14, 8], "2.84"],
+      [[223.0, 137.0, 18, 9], "33.01"],
+      [[227.0, 147.0, 14, 8], "1.01"],
+      [[227.0, 158.0, 14, 8], "2.12"],
+      [[223.0, 168.0, 18, 9], "34.92"],
+      [[223.0, 178.0, 18, 9], "29.06"],
+      [[223.0, 189.0, 18, 9], "66.99"],
+      [[223.0, 199.0, 18, 9], "54.58"],
+      [[223.0, 209.0, 18, 9], "55.90"],
+      [[223.0, 220.0, 18, 9], "61.17"],
+      [[223.0, 230.0, 18, 9], "58.29"],
+      [[223.0, 241.0, 18, 9], "64.24"],
+      [[223.0, 251.0, 18, 9], "20.45"],
+      [[223.0, 261.0, 18, 9], "61.98"],
+      [[223.0, 272.0, 18, 9], "74.42"],
+      [[223.0, 282.0, 18, 9], "18.01"],
+      [[223.0, 293.0, 18, 9], "63.07"],
+      [[223.0, 303.0, 18, 9], "65.83"],
+      [[223.0, 313.0, 18, 9], "64.82"],
+      [[223.0, 324.0, 18, 9], "65.08"],
+      [[317.0, 126.0, 18, 9], "82.35"],
+      [[317.0, 137.0, 18, 9], "84.59"],
+      [[317.0, 147.0, 18, 9], "66.21"],
+      [[317.0, 158.0, 18, 9], "54.78"],
+      [[317.0, 168.0, 18, 9], "87.53"],
+      [[317.0, 178.0, 18, 9], "79.98"],
+      [[317.0, 189.0, 18, 9], "72.28"],
+      [[317.0, 199.0, 18, 9], "90.02"],
+      [[317.0, 209.0, 18, 9], "90.37"],
+      [[317.0, 220.0, 18, 9], "77.94"],
+      [[317.0, 230.0, 18, 9], "86.52"],
+      [[317.0, 241.0, 18, 9], "84.80"],
+      [[317.0, 251.0, 18, 9], "47.64"],
+      [[317.0, 261.0, 18, 9], "80.61"],
+      [[317.0, 272.0, 18, 9], "89.26"],
+      [[317.0, 282.0, 18, 9], "52.75"],
+      [[317.0, 293.0, 18, 9], "70.77"],
+      [[317.0, 303.0, 18, 9], "86.07"],
+      [[317.0, 313.0, 18, 9], "77.61"],
+      [[317.0, 324.0, 18, 9], "79.30"],
+      [[405.0, 126.0, 18, 9], "68.19"],
+      [[405.0, 137.0, 18, 9], "84.66"],
+      [[405.0, 147.0, 18, 9], "50.47"],
+      [[405.0, 158.0, 18, 9], "47.70"],
+      [[405.0, 168.0, 18, 9], "43.34"],
+      [[409.0, 178.0, 14, 8], "0.60"],
+      [[405.0, 189.0, 18, 9], "60.90"],
+      [[405.0, 199.0, 18, 9], "69.13"],
+      [[405.0, 209.0, 18, 9], "72.53"],
+      [[405.0, 220.0, 18, 9], "72.75"],
+      [[405.0, 230.0, 18, 9], "45.64"],
+      [[405.0, 241.0, 18, 9], "76.52"],
+      [[405.0, 251.0, 18, 9], "56.95"],
+      [[405.0, 261.0, 18, 9], "84.37"],
+      [[405.0, 272.0, 18, 9], "73.32"],
+      [[405.0, 282.0, 18, 9], "73.99"],
+      [[405.0, 293.0, 18, 9], "80.03"],
+      [[405.0, 303.0, 18, 9], "80.07"],
+      [[405.0, 313.0, 18, 9], "80.84"],
+      [[405.0, 324.0, 18, 9], "60.30"],
+      [[493.0, 126.0, 18, 9], "85.66"],
+      [[493.0, 137.0, 18, 9], "86.88"],
+      [[493.0, 147.0, 18, 9], "88.67"],
+      [[493.0, 158.0, 18, 9], "88.56"],
+      [[493.0, 168.0, 18, 9], "86.42"],
+      [[493.0, 178.0, 18, 9], "82.35"],
+      [[493.0, 189.0, 18, 9], "87.09"],
+      [[493.0, 199.0, 18, 9], "86.18"],
+      [[493.0, 209.0, 18, 9], "91.31"],
+      [[493.0, 220.0, 18, 9], "89.66"],
+      [[493.0, 230.0, 18, 9], "79.26"],
+      [[493.0, 241.0, 18, 9], "89.73"],
+      [[493.0, 251.0, 18, 9], "72.30"],
+      [[493.0, 261.0, 18, 9], "91.80"],
+      [[493.0, 272.0, 18, 9], "90.32"],
+      [[493.0, 282.0, 18, 9], "80.90"],
+      [[493.0, 293.0, 18, 9], "91.23"],
+      [[493.0, 303.0, 18, 9], "91.07"],
+      [[493.0, 313.0, 18, 9], "89.13"],
+      [[493.0, 324.0, 18, 9], "83.93"],
+      [
+        [57.0, 339.0, 435, 13],
+        "The percentages in bold indicate significant difference (P < 0.05) between A570 nm of treatment with norspermidine and of treatment without nor-"
+      ],
+      [
+        [57.0, 350.0, 447, 8],
+        "spermidine. Biofilm inhibition and eradication by norspermidine was conducted as described in the Material and Methods section and the assays were"
+      ],
+      [[57.0, 360.0, 118, 8], "performed in three independent assays."],
+      [
+        [57.0, 370.0, 344, 13],
+        "1Percent inhibition was calculated with reference to measuring at A570 nm of biofilm formed without norspermidine."
+      ],
+      [
+        [57.0, 380.0, 390, 13],
+        "2Percent eradication was calculated with reference to measuring at A570 nm of 24 h mature biofilm cultured without norspermidine."
+      ],
+      [
+        [57.0, 407.0, 206, 9],
+        "more than 20% biofilm formation of PAO1 at concentra-"
+      ],
+      [
+        [57.0, 419.0, 205, 9],
+        "tion more than 0.1 mmol/L. And it can effectively inhibit"
+      ],
+      [
+        [57.0, 431.0, 217, 9],
+        "more than 50% biofilm formation compared with untreated"
+      ],
+      [
+        [57.0, 443.0, 195, 9],
+        "group at concentration more than 5 mmol/L (Figs. 2A"
+      ],
+      [
+        [57.0, 455.0, 209, 9],
+        "and C). Norspermidine eradicated biofilms also in a dose-\u00ad"
+      ],
+      [
+        [57.0, 467.0, 209, 9],
+        "responsive manner. It began to dismantle the 24-h\u00ad mature"
+      ],
+      [
+        [57.0, 479.0, 210, 9],
+        "biofilm at 1 mmol/L (Figs. 2B and C). When tested against"
+      ],
+      [
+        [57.0, 491.0, 202, 9],
+        "the biofilms of clinical isolates of P. aeruginosa, norsper-"
+      ],
+      [
+        [57.0, 503.0, 215, 9],
+        "midine was effective at blocking formation of most biofilms"
+      ],
+      [
+        [57.0, 515.0, 211, 9],
+        "as determined by the measurement of the biofilm biomass."
+      ],
+      [
+        [57.0, 527.0, 208, 9],
+        "In addition to blocking biofilm formation, norspermidine"
+      ],
+      [
+        [57.0, 539.0, 196, 9],
+        "also significantly eradicated established biofilms by the"
+      ],
+      [[57.0, 551.0, 54, 9], "clinical strains."],
+      [
+        [66.0, 563.0, 186, 9],
+        "The strong antibiofilm activity was also observed by"
+      ],
+      [
+        [57.0, 575.0, 192, 9],
+        "SEM. As shown in Figs. 3A, SEM was performed after"
+      ],
+      [
+        [57.0, 587.0, 202, 9],
+        "norspermidine (4 mmol/L) treatment of 24 h old P. aer-"
+      ],
+      [
+        [57.0, 599.0, 180, 9],
+        "uginosa biofilms. Consistent with the observations"
+      ],
+      [
+        [57.0, 611.0, 188, 9],
+        "\u00adacquired by crystal violet staining, SEM analysis also"
+      ],
+      [
+        [57.0, 623.0, 198, 9],
+        "showed a dramatic reduction of biofilm attached to the"
+      ],
+      [
+        [57.0, 635.0, 205, 9],
+        "surface of the urethral catheters and cover slides. Besides,"
+      ],
+      [
+        [57.0, 647.0, 203, 9],
+        "biofilms treated with the norspermidine contained dam-"
+      ],
+      [
+        [57.0, 659.0, 192, 9],
+        "aged bacteria (making the cells shrinking, diminished"
+      ],
+      [
+        [57.0, 671.0, 203, 9],
+        "and ruptured) at high concentration (25 mmol/L), while"
+      ],
+      [
+        [57.0, 683.0, 195, 9],
+        "these were not visible in nontreated biofilms (Fig. 3B),"
+      ],
+      [
+        [57.0, 695.0, 205, 9],
+        "which suggest that high-d\u00ad ose norspermidine would have"
+      ],
+      [
+        [302.0, 407.0, 194, 9],
+        "a very similar bactericidal effect to that seen on plank-"
+      ],
+      [[302.0, 419.0, 38, 9], "tonic cells."],
+      [[302.0, 449.0, 154, 11], "Effect of norspermidine on PAO1"],
+      [[302.0, 461.0, 54, 11], "attachment"],
+      [
+        [302.0, 479.0, 199, 9],
+        "We tested the inhibitory effect of norspermidine on the"
+      ],
+      [
+        [302.0, 491.0, 209, 9],
+        "ability of P. aeruginosa to adhere to 96-\u00adwell plate. Cultures"
+      ],
+      [
+        [302.0, 503.0, 190, 9],
+        "treated with norspermidine showed a concentration-\u00ad"
+      ],
+      [
+        [302.0, 515.0, 192, 9],
+        "dependent reduction in cell-s\u00adurface attachment. Cell-\u00ad"
+      ],
+      [
+        [302.0, 527.0, 211, 9],
+        "surface attachment reduction shows statistically significant"
+      ],
+      [
+        [302.0, 539.0, 194, 11],
+        "(P < 0.05) at concentration of \u22652.5 mmol/L. Exposure"
+      ],
+      [
+        [302.0, 551.0, 201, 9],
+        "to norspermidine at concentration of 4 mmol/L showed"
+      ],
+      [
+        [302.0, 563.0, 196, 9],
+        "a 71.22% decrease in bacteria attachment as compared"
+      ],
+      [[302.0, 575.0, 113, 9], "to control at 0 mmol/L (Fig. 4)."],
+      [[302.0, 605.0, 176, 11], "Inhibitory effect of norspermidine on"],
+      [[302.0, 617.0, 89, 11], "swimming motility"],
+      [
+        [302.0, 635.0, 209, 9],
+        "Swimming motility zone of standard strain PAO1 without"
+      ],
+      [
+        [302.0, 647.0, 197, 9],
+        "supplementation of norspermidine was 5.42 \u00b1 0.51 cm"
+      ],
+      [
+        [302.0, 659.0, 194, 9],
+        "that was significantly reduced to 3.12 \u00b1 0.32 cm in the"
+      ],
+      [
+        [302.0, 671.0, 198, 9],
+        "presence of 4 mmol/L norspermidine (Fig. 5). But nor-"
+      ],
+      [
+        [302.0, 683.0, 191, 9],
+        "spermidine had few effects on swarming or twitching"
+      ],
+      [[302.0, 695.0, 100, 9], "motilities (data not shown)."],
+      [
+        [57.0, 730.0, 198, 7],
+        "\u00a9 2016 The Authors. MicrobiologyOpen published by John Wiley & Sons Ltd."
+      ],
+      [[516.0, 729.0, 13, 9], "407"]
+    ],
+    [782, 595]
+  ],
+  [
+    7,
+    [
+      [
+        [65.0, 42.0, 163, 9],
+        "Effects of Norspermidine on P. aeruginosa Biofilm"
+      ],
+      [[503.0, 42.0, 33, 8], "L. Qu et al."],
+      [[392.0, 326.0, 136, 9], "Figure 3. SEM examination for eradication of"],
+      [[392.0, 336.0, 131, 8], "PAO1 mature biofilm by norspermidine. The"],
+      [[392.0, 347.0, 122, 8], "24 h mature biofilms on (A) catheter and"],
+      [[392.0, 357.0, 131, 8], "cover slide were cultured with (4 mmol/L) or"],
+      [[392.0, 368.0, 121, 8], "without norspermidine for another 24 h,"],
+      [[392.0, 378.0, 110, 8], "then fixed and examined by SEM. (B)"],
+      [[392.0, 389.0, 130, 8], "Norspermidine reduced the biofilm biomass"],
+      [[392.0, 399.0, 88, 8], "and changed its morphology."],
+      [
+        [65.0, 568.0, 209, 9],
+        "Figure 4. Attachment of PAO1 cells to the surfaces of microtiter plate"
+      ],
+      [
+        [65.0, 578.0, 206, 8],
+        "wells containing norspermidine. Experiment is representative of three"
+      ],
+      [
+        [65.0, 589.0, 206, 8],
+        "independent tests. *P < 0.05 versus untreated control, and error bars"
+      ],
+      [[65.0, 599.0, 35, 8], "indicate SD."],
+      [[65.0, 629.0, 191, 11], "Inhibitory effect of norspermidine on QS"],
+      [[65.0, 641.0, 33, 11], "system"],
+      [
+        [65.0, 660.0, 205, 9],
+        "To assess the effect of norspermidine on the gene expres-"
+      ],
+      [
+        [65.0, 672.0, 204, 9],
+        "sion of QS-r\u00adelated genes, PAO1 was cultured in the pres-"
+      ],
+      [
+        [65.0, 684.0, 207, 9],
+        "ence of 4 mmol/L norspermidine and the gene expression"
+      ],
+      [
+        [65.0, 696.0, 207, 9],
+        "was evaluated by real-\u00adtime PCR (Fig. 6A). The expression"
+      ],
+      [
+        [310.0, 431.0, 205, 9],
+        "of lasR, lasI, rhlR, rhlI, and mvfR, which are related to QS"
+      ],
+      [
+        [310.0, 443.0, 213, 9],
+        "system, was significantly decreased by norspermidine treat-"
+      ],
+      [
+        [310.0, 455.0, 201, 9],
+        "ment at the concentration of 4 mmol/L. For better fold-\u00ad"
+      ],
+      [
+        [310.0, 465.0, 203, 15],
+        "change comprehension, the traditional 2\u2212\u0394\u0394CT value was"
+      ],
+      [
+        [310.0, 479.0, 217, 9],
+        "calculated (Kim et al. 2015a,b). The gene expression analysis"
+      ],
+      [
+        [310.0, 491.0, 211, 9],
+        "indicates that the norspermidine inhibit biofilm formation"
+      ],
+      [
+        [310.0, 503.0, 214, 9],
+        "by downregulating the expression level of QS-r\u00adelated genes."
+      ],
+      [
+        [320.0, 515.0, 186, 9],
+        "At the same time, three QS-\u00adrelated virulence factors"
+      ],
+      [
+        [310.0, 527.0, 201, 9],
+        "(pyocyanin, elastase activity, and protease activity) were"
+      ],
+      [
+        [310.0, 539.0, 198, 9],
+        "analyzed to assess the effects of norspermidine on viru-"
+      ],
+      [
+        [310.0, 551.0, 215, 9],
+        "lence. Production of the three virulence factors was reduced"
+      ],
+      [
+        [310.0, 563.0, 204, 9],
+        "by norspermidine in a concentration-d\u00adependent manner"
+      ],
+      [
+        [310.0, 575.0, 207, 9],
+        "(0, 2, and 4 mmol/L norspermidine added): 45\u201354% sup-"
+      ],
+      [
+        [310.0, 587.0, 203, 9],
+        "pression for pyocyanin, 59\u201369% suppression for elastase"
+      ],
+      [
+        [310.0, 599.0, 194, 9],
+        "activity, and 53\u201366% suppression for protease activity"
+      ],
+      [[310.0, 611.0, 45, 9], "(Fig. 6B\u2013D)."],
+      [[310.0, 640.0, 60, 12], "Discussion"],
+      [
+        [310.0, 659.0, 204, 9],
+        "In this work, we demonstrated the antimicrobial and an-"
+      ],
+      [
+        [310.0, 671.0, 214, 9],
+        "tibiofilm effects of exogenous norspermidine against P. aer-"
+      ],
+      [
+        [310.0, 683.0, 210, 9],
+        "uginosa. The effects of norspermidine on our P. aeruginosa"
+      ],
+      [
+        [310.0, 695.0, 212, 9],
+        "strains was similar to that reported by V. cholerae, Neisseria"
+      ],
+      [[65.0, 729.0, 13, 9], "408"],
+      [
+        [323.0, 730.0, 198, 7],
+        "\u00a9 2016 The Authors. MicrobiologyOpen published by John Wiley & Sons Ltd."
+      ]
+    ],
+    [782, 595]
+  ],
+  [
+    8,
+    [
+      [[57.0, 42.0, 33, 8], "L. Qu et al."],
+      [
+        [356.0, 42.0, 163, 9],
+        "Effects of Norspermidine on P. aeruginosa Biofilm"
+      ],
+      [[57.0, 201.0, 123, 9], "Figure 5. Photographs of plates showing"],
+      [[57.0, 211.0, 129, 8], "inhibition of swimming motility of standard"],
+      [[57.0, 222.0, 136, 8], "strain PAO1 in the presence of norspermidine"],
+      [[57.0, 232.0, 34, 8], "(4 mmol/L)."],
+      [[216.0, 257.0, 6, 10], "A"],
+      [[377.0, 257.0, 6, 10], "B"],
+      [[57.0, 375.0, 111, 9], "Figure 6. Norspermidne restrains the"],
+      [[57.0, 385.0, 105, 8], "expression of QS-r\u00adelated genes and"],
+      [
+        [57.0, 394.0, 144, 16],
+        "production of virulence factors. (A) PAO1 was C"
+      ],
+      [[377.0, 394.0, 6, 10], "D"],
+      [[57.0, 406.0, 120, 8], "cultured and treated with 0 or 4 mmol/L"],
+      [[57.0, 417.0, 124, 8], "norspermidine and qRT-P\u00ad CR analysis was"],
+      [[57.0, 427.0, 131, 8], "performed as described in the Materials and"],
+      [[57.0, 438.0, 116, 8], "Methods section. Activities of virulence"],
+      [[57.0, 448.0, 122, 8], "factors including (B) protease activity, (C)"],
+      [[57.0, 459.0, 111, 8], "pyocyanin, and (D) elastase activity at"],
+      [[57.0, 469.0, 124, 8], "different concentrations of norspermidine"],
+      [[57.0, 480.0, 137, 8], "(0, 2, and 4 mmol/L) were analyzed.*P < 0.05"],
+      [[57.0, 490.0, 118, 8], "versus untreated control, and error bars"],
+      [[57.0, 501.0, 35, 8], "indicate SD."],
+      [
+        [57.0, 527.0, 198, 9],
+        "gonorrhoeae, B. subtilis, E. coli, S. aureus, S. epidermidis,"
+      ],
+      [
+        [57.0, 539.0, 200, 9],
+        "and even mixed culture (McGinnis et al. 2009; B\u00f6ttcher"
+      ],
+      [
+        [57.0, 551.0, 199, 9],
+        "et al. 2013; Ram\u00f3n-P\u00ad er\u00e9z et al. 2015; Goytia et al. 2013;"
+      ],
+      [
+        [57.0, 563.0, 209, 9],
+        "Si et al. 2015), although higher concentrations of norsper-"
+      ],
+      [
+        [57.0, 575.0, 208, 9],
+        "midine were required in our experiment. Furthermore, to"
+      ],
+      [
+        [57.0, 587.0, 196, 9],
+        "our knowledge, there are no studies demonstrating the"
+      ],
+      [
+        [57.0, 599.0, 212, 9],
+        "disassembly on biofilms of PAO1 and P. aeruginosa clinical"
+      ],
+      [
+        [57.0, 611.0, 210, 9],
+        "isolates by norspermidine and its potential effect on bacte-"
+      ],
+      [
+        [57.0, 623.0, 199, 9],
+        "rial adherence and QS-\u00adrelated genes (rhlI/R, lasI/R, and"
+      ],
+      [
+        [57.0, 635.0, 203, 9],
+        "mvfR) expression and QS-r\u00adelated virulence factors (pyo-"
+      ],
+      [
+        [57.0, 647.0, 207, 9],
+        "cyanin, elastase activity, and protease activity). Therefore,"
+      ],
+      [
+        [57.0, 659.0, 164, 9],
+        "this is the first work that highlights this effect."
+      ],
+      [
+        [66.0, 671.0, 201, 9],
+        "Norspermidine could interact directly with the extracel-"
+      ],
+      [
+        [57.0, 683.0, 196, 9],
+        "lular polysaccharide through binding to the functional"
+      ],
+      [
+        [57.0, 695.0, 213, 9],
+        "group C-\u00adO-C\u00ad . Furthermore, norspermidine could increase"
+      ],
+      [
+        [302.0, 527.0, 205, 9],
+        "cell surface-\u00adnegative charge, decrease cell hydrophobicity"
+      ],
+      [
+        [302.0, 539.0, 192, 9],
+        "(Si et al. 2014), and these features could contribute to"
+      ],
+      [[302.0, 551.0, 99, 9], "the disassembly of biofilms."],
+      [
+        [311.0, 563.0, 185, 9],
+        "In addition, biofilm formation by P. aeruginosa was"
+      ],
+      [
+        [302.0, 575.0, 203, 9],
+        "also inhibited by treatment with norspermidine cultured"
+      ],
+      [
+        [302.0, 587.0, 211, 9],
+        "both on polystyrene slide covers and on surface of catheter"
+      ],
+      [
+        [302.0, 599.0, 213, 9],
+        "pieces (Fig. 3A). Many studies reported that norspermidine"
+      ],
+      [
+        [302.0, 611.0, 204, 9],
+        "did not inhibit cell growth even at millimolar concentra-"
+      ],
+      [
+        [302.0, 623.0, 201, 9],
+        "tions (Rasamiravaka et al. 2015), but our results showed"
+      ],
+      [
+        [302.0, 635.0, 206, 9],
+        "that growth of P. aeruginosa was suppressed by treatment"
+      ],
+      [
+        [302.0, 647.0, 204, 9],
+        "with high concentration of norspermidine (Fig. 1A). The"
+      ],
+      [
+        [302.0, 659.0, 203, 9],
+        "bacterial counting assay also showed that norspermidine"
+      ],
+      [
+        [302.0, 671.0, 214, 9],
+        "has an antibactericidal effect against P. aeruginosa (Fig. 1B)."
+      ],
+      [
+        [302.0, 683.0, 206, 9],
+        "This may be due to differences between the strains tested."
+      ],
+      [
+        [302.0, 695.0, 192, 9],
+        "The variation in levels of clinical isolates sensitivity to"
+      ],
+      [
+        [57.0, 730.0, 198, 7],
+        "\u00a9 2016 The Authors. MicrobiologyOpen published by John Wiley & Sons Ltd."
+      ],
+      [[516.0, 729.0, 13, 9], "409"]
+    ],
+    [782, 595]
+  ],
+  [
+    9,
+    [
+      [
+        [65.0, 42.0, 163, 9],
+        "Effects of Norspermidine on P. aeruginosa Biofilm"
+      ],
+      [[503.0, 42.0, 33, 8], "L. Qu et al."],
+      [
+        [65.0, 72.0, 198, 9],
+        "norspermidine could be explained by the different bio-"
+      ],
+      [
+        [65.0, 84.0, 203, 9],
+        "chemical composition in biofilms or different content of"
+      ],
+      [
+        [65.0, 96.0, 217, 9],
+        "exopolysaccharides and the different structural arrangement"
+      ],
+      [
+        [65.0, 108.0, 197, 9],
+        "of exopolysaccharide within the biofilm (Ram\u00f3n-P\u00ader\u00e9z"
+      ],
+      [
+        [65.0, 120.0, 195, 9],
+        "et al. 2015). Furthermore, some strains may produce a"
+      ],
+      [
+        [65.0, 132.0, 188, 9],
+        "more robust biofilm, making them more resistant to"
+      ],
+      [[65.0, 144.0, 56, 9], "norspermidine."],
+      [
+        [75.0, 156.0, 188, 9],
+        "There are essentially two major steps in biofilm pro-"
+      ],
+      [
+        [65.0, 168.0, 199, 9],
+        "duction: (1) cell-s\u00adurface attachment, biofilm formation"
+      ],
+      [
+        [65.0, 180.0, 200, 9],
+        "starts with adhesion of so-\u00adcalled \u201clinking film\u201d bacteria,"
+      ],
+      [
+        [65.0, 192.0, 211, 9],
+        "which provide the groundwork for further biofilm growth;"
+      ],
+      [
+        [65.0, 204.0, 200, 9],
+        "(2) cell\u2013cell interaction, which is an accumulative phase"
+      ],
+      [
+        [65.0, 216.0, 200, 9],
+        "where the bacteria form microcolonies for construction"
+      ],
+      [
+        [65.0, 228.0, 196, 9],
+        "of multilayer structure leading to biofilm development"
+      ],
+      [
+        [65.0, 240.0, 194, 9],
+        "(Mack 1999; G\u00f6tz 2002; Mack et al. 2004). As demon-"
+      ],
+      [
+        [65.0, 252.0, 210, 9],
+        "strated by the biofilm microtiter attachment assay, biofilm"
+      ],
+      [
+        [65.0, 264.0, 201, 9],
+        "inhibitors like norspermidine facilitate the separation of"
+      ],
+      [
+        [65.0, 276.0, 199, 9],
+        "biofilms from surfaces. The percentage of bacterial cell-\u00ad"
+      ],
+      [
+        [65.0, 288.0, 195, 9],
+        "surface attachment is directly proportional to the final"
+      ],
+      [
+        [65.0, 300.0, 210, 9],
+        "mass of biofilm formed. A lower percentage of cell-\u00adsurface"
+      ],
+      [
+        [65.0, 312.0, 200, 9],
+        "attachment therefore corresponds to a lesser number of"
+      ],
+      [
+        [65.0, 324.0, 206, 9],
+        "bacterial cells involved in biofilm development, which es-"
+      ],
+      [
+        [65.0, 336.0, 201, 9],
+        "sentially gives rise to formation of weaker biofilm struc-"
+      ],
+      [
+        [65.0, 348.0, 180, 9],
+        "tures, and making the bacteria more vulnerable to"
+      ],
+      [
+        [65.0, 360.0, 198, 9],
+        "eradication (Santiago et al. 2015a,b). This property can"
+      ],
+      [
+        [65.0, 372.0, 193, 9],
+        "be applied industrially, for example, to the removal of"
+      ],
+      [
+        [65.0, 384.0, 203, 9],
+        "biofilm formed on membrane filters for water treatment"
+      ],
+      [
+        [65.0, 396.0, 167, 9],
+        "(Kappachery et al. 2010) or on water/oil pipes."
+      ],
+      [
+        [75.0, 408.0, 202, 9],
+        "Biofilm formation is invariably preceded by attachment,"
+      ],
+      [
+        [65.0, 420.0, 202, 9],
+        "which is mediated by flagellar motilities (swimming and"
+      ],
+      [
+        [65.0, 432.0, 217, 9],
+        "swarming) and in later stages by twitching motility (Klausen"
+      ],
+      [
+        [65.0, 444.0, 199, 9],
+        "et al. 2003). Twitching motility occurs by successive ex-"
+      ],
+      [
+        [65.0, 456.0, 209, 9],
+        "tension and retraction of polar type IV pili but not flagella"
+      ],
+      [
+        [65.0, 468.0, 193, 9],
+        "(Mattick 2002). Twitching motility appears to be pre-"
+      ],
+      [
+        [65.0, 480.0, 191, 9],
+        "dominantly a mean of rapid colonization by bacterial"
+      ],
+      [
+        [65.0, 492.0, 194, 9],
+        "communities to new surface, and twitching motility is"
+      ],
+      [
+        [65.0, 504.0, 209, 9],
+        "necessary for the assembly of a monolayer of P. aeruginosa"
+      ],
+      [
+        [65.0, 516.0, 214, 9],
+        "cells into microcolonies (O\u2019Toole and Kolter 1998; O\u2019Toole"
+      ],
+      [
+        [65.0, 528.0, 196, 9],
+        "et al. 1999). The swarming motility is a form of organ-"
+      ],
+      [
+        [65.0, 540.0, 194, 9],
+        "ized surface translocation which depends on extensive"
+      ],
+      [
+        [65.0, 552.0, 202, 9],
+        "flagellation and cell-t\u00ado-\u00adcell contact, and regulated by the"
+      ],
+      [
+        [65.0, 564.0, 190, 9],
+        "rhl system (Daniels et al. 2004). Swarming motility is"
+      ],
+      [
+        [65.0, 576.0, 201, 9],
+        "implicated in early stages of P. aeruginosa biofilm estab-"
+      ],
+      [
+        [65.0, 588.0, 213, 9],
+        "lishment. Strains grown under the conditions that promote"
+      ],
+      [
+        [65.0, 600.0, 198, 9],
+        "swarming motility form flat and uniform biofilm while"
+      ],
+      [
+        [65.0, 612.0, 198, 9],
+        "strains with limited swarming motility result in biofilm"
+      ],
+      [
+        [65.0, 624.0, 201, 9],
+        "containing discontinuous cell aggregates (Rasamiravaka"
+      ],
+      [
+        [65.0, 636.0, 204, 9],
+        "et al. 2015; Shrout et al. 2006). Although all those motili-"
+      ],
+      [
+        [65.0, 648.0, 208, 9],
+        "ties are important for P. aeruginosa biofilm establishment,"
+      ],
+      [
+        [65.0, 660.0, 202, 9],
+        "but our studies showed that norspermidine could nearly"
+      ],
+      [
+        [65.0, 672.0, 174, 9],
+        "only inhibit swimming motility of P. aeruginosa."
+      ],
+      [
+        [75.0, 684.0, 187, 9],
+        "Evidence is accumulating showing that the ability to"
+      ],
+      [
+        [65.0, 696.0, 206, 9],
+        "form biofilms in many organisms involves QS regulation."
+      ],
+      [
+        [310.0, 72.0, 211, 9],
+        "Pseudomonas aeruginosa produces both cell-\u00adassociated and"
+      ],
+      [
+        [310.0, 84.0, 195, 9],
+        "extracellular virulence factors (e.g., lasB-\u00adelastase, lasA-\u00ad"
+      ],
+      [
+        [310.0, 96.0, 210, 9],
+        "staphylolytic protease, toxA-e\u00adxotoxin A, and aprA-\u00adalkaline"
+      ],
+      [
+        [310.0, 108.0, 199, 9],
+        "protease) (Hentzer et al. 2002) globally regulated by QS"
+      ],
+      [
+        [310.0, 120.0, 202, 9],
+        "systems arranged in hierarchical manner with las system"
+      ],
+      [
+        [310.0, 132.0, 207, 9],
+        "at the top, positively controlling the activity of rhl system."
+      ],
+      [
+        [310.0, 144.0, 208, 9],
+        "QS circuits allow bacteria to coordinate their gene expres-"
+      ],
+      [
+        [310.0, 156.0, 201, 9],
+        "sion in a cell density-\u00addependent manner. The las system"
+      ],
+      [
+        [310.0, 168.0, 188, 9],
+        "utilizes N-\u00ad(3-\u00adoxododecanoyl)-l\u00ad -\u00adhomoserine lactone"
+      ],
+      [
+        [310.0, 180.0, 204, 15],
+        "(3-\u00adoxo-\u00adC12HSL), whereas rhl system functions by means"
+      ],
+      [
+        [310.0, 192.0, 212, 15],
+        "of N-\u00adbutanoyl-l\u00ad -\u00adhomoserine lactone (C4HSL) as the signal"
+      ],
+      [
+        [310.0, 204.0, 194, 9],
+        "molecules (Rasamiravaka et al. 2015). In this study, to"
+      ],
+      [
+        [310.0, 216.0, 207, 9],
+        "evaluate correlation between inhibitory effect by norsper-"
+      ],
+      [
+        [310.0, 228.0, 208, 9],
+        "midine and QS system, we determined the mRNA expres-"
+      ],
+      [
+        [310.0, 240.0, 203, 9],
+        "sion level of several representative QS-r\u00adelated genes such"
+      ],
+      [
+        [310.0, 252.0, 209, 9],
+        "as lasR/I, rhlR/I, and mvfR, using a real-t\u00adime PCR analysis."
+      ],
+      [
+        [310.0, 264.0, 201, 15],
+        "It is known that the las system (LasR/3-\u00adoxo-\u00adC12-\u00adHSL) is"
+      ],
+      [
+        [310.0, 276.0, 210, 9],
+        "essential for biofilm differentiation and plays a role during"
+      ],
+      [
+        [310.0, 288.0, 201, 9],
+        "the irreversible attachment stage, whereas the rhl system"
+      ],
+      [
+        [310.0, 300.0, 213, 15],
+        "(RhlR/C4-\u00adHSL) is important for optimal biofilm formation"
+      ],
+      [
+        [310.0, 312.0, 196, 9],
+        "(Favre-B\u00adont\u00e9 et al. 2003). In this study, norspermidine"
+      ],
+      [
+        [310.0, 324.0, 219, 9],
+        "significantly inhibited the transcription level of lasR/I, rhlR/I,"
+      ],
+      [
+        [310.0, 336.0, 206, 9],
+        "and mvfR, and which appears to affect characteristic phe-"
+      ],
+      [
+        [310.0, 348.0, 201, 9],
+        "notypes as demonstrated by reduced biofilm formation,"
+      ],
+      [
+        [310.0, 360.0, 167, 9],
+        "decreased bacterial motilities, and attachment."
+      ],
+      [
+        [320.0, 372.0, 194, 9],
+        "At the same time, new important discoveries continue"
+      ],
+      [
+        [310.0, 384.0, 210, 9],
+        "to be made, such as the recent determination that a library"
+      ],
+      [
+        [310.0, 396.0, 203, 9],
+        "of compound that structurally mimicked norspermidine"
+      ],
+      [
+        [310.0, 408.0, 212, 9],
+        "(like guanidine and biguanide) was synthesized chemically,"
+      ],
+      [
+        [310.0, 420.0, 206, 9],
+        "which inhibited biofilm formation and disrupted existing"
+      ],
+      [
+        [310.0, 432.0, 197, 9],
+        "biofilms by B. subtilis and S. aureus through binding to"
+      ],
+      [
+        [310.0, 444.0, 206, 9],
+        "negatively charged or possibly polar groups through cou-"
+      ],
+      [
+        [310.0, 456.0, 202, 9],
+        "lombic attraction and hydrogen bonding (B\u00f6ttcher et al."
+      ],
+      [
+        [310.0, 468.0, 214, 9],
+        "2013). Another example is that B. subtilis produces d-\u00adamino"
+      ],
+      [
+        [310.0, 480.0, 197, 9],
+        "acids in stationary phase and that they have biofilm in-"
+      ],
+      [
+        [310.0, 492.0, 204, 9],
+        "hibitory properties (Si et al. 2014; Hochbaum et al. 2011;"
+      ],
+      [
+        [310.0, 504.0, 194, 9],
+        "Sanchez et al. 2013; Kolodkin-\u00adGal et al. 2010) without"
+      ],
+      [
+        [310.0, 516.0, 192, 9],
+        "influence the growth of bacteria. Mixtures of d-\u00adamino"
+      ],
+      [
+        [310.0, 528.0, 204, 9],
+        "acids with norspermidine were found to be highly syner-"
+      ],
+      [
+        [310.0, 540.0, 155, 9],
+        "gistic in disrupting biofilms (Si et al. 2014)."
+      ],
+      [
+        [320.0, 552.0, 196, 9],
+        "We conclude that norspermidine could inhibit biofilm"
+      ],
+      [
+        [310.0, 564.0, 197, 9],
+        "formation and eradicate 24-h\u00ad mature biofilm in P. aer-"
+      ],
+      [
+        [310.0, 576.0, 202, 9],
+        "uginosa PAO1 and clinical strains by (1) preventing cell-\u00ad"
+      ],
+      [
+        [310.0, 588.0, 192, 9],
+        "surface attachment; (2) inhibiting swimming motility"
+      ],
+      [
+        [310.0, 600.0, 201, 9],
+        "phenotype; and (3) downregulating QS-\u00adrelated gene ex-"
+      ],
+      [
+        [310.0, 612.0, 203, 9],
+        "pression. These results suggest that norspermidine could"
+      ],
+      [
+        [310.0, 624.0, 198, 9],
+        "be a potent antibiofilm agent for formulating strategies"
+      ],
+      [[310.0, 636.0, 105, 9], "against P. aeruginosa biofilm."],
+      [[310.0, 664.0, 106, 12], "Acknowledgments"],
+      [
+        [310.0, 684.0, 192, 9],
+        "The authors acknowledge the financial support of the"
+      ],
+      [
+        [310.0, 696.0, 198, 9],
+        "Natural Science Foundation of Hunan Province, China"
+      ],
+      [[65.0, 729.0, 13, 9], "410"],
+      [
+        [323.0, 730.0, 198, 7],
+        "\u00a9 2016 The Authors. MicrobiologyOpen published by John Wiley & Sons Ltd."
+      ]
+    ],
+    [782, 595]
+  ]
+]

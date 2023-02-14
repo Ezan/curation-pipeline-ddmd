@@ -1,0 +1,8 @@
+Batch execution:2022-12-12 09:34:34 ---------------------
+4 documents found in input folder:
+2022-12-12 09:38:26:PDFigCapX could not process all the content for 33372380.pdf
+Batch execution:2022-12-12 13:10:57 ---------------------
+4 documents found in input folder:
+Batch execution:2022-12-12 13:17:17 ---------------------
+4 documents found in input folder:
+2022-12-12 13:38:14:PDFigCapX could not process all the content for 33372380.pdf

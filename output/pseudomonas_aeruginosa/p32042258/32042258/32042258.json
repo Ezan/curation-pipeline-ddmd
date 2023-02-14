@@ -1,0 +1,70 @@
+{
+  "pages_annotated": [],
+  "figures": [
+    {
+      "page_width": 595,
+      "caption_text": [
+        "Fig. 4. SEM images at different magni\ufb01cation for (A) P. aeruginosa PAO1 wild type, and (B) P. aeruginosa OprF mutant detecting bio\ufb01lm and cells attachment."
+      ],
+      "figure_type": "Figure",
+      "region_bb": [72, 66, 455, 418],
+      "caption_bb": [62.0, 494.0, 429, 8],
+      "page": 4,
+      "page_height": 793
+    },
+    {
+      "page_width": 595,
+      "caption_text": [
+        "Fig. 5. OprF mutant strains showing altered pyocyanin production. Compared to",
+        "the relative amounts of pyocyanin extracted from strain P. aeruginosa PAO1 after",
+        "the bacteria were grown in LB broth. Experiments were repeated three times and",
+        "pyocyanin measurements at OD520 was obtained using microplate reader and",
+        "normalized to cell growth measured as OD600."
+      ],
+      "figure_type": "Figure",
+      "region_bb": [349, 523, 204, 114],
+      "caption_bb": [311.0, 659.0, 223.0, 42.0],
+      "page": 4,
+      "page_height": 793
+    },
+    {
+      "page_width": 595,
+      "caption_text": [
+        "Fig. 1. Comparing bacterial growth of P. aeruginosa PAO1 and OprF mutant strain on LB Broth. It is demonstrated that generation time of the OprF de\ufb01cient strain was slower",
+        "and the elongated lag time of inoculation, than the P. aeruginosa wild strain, however, decline phase showed similar pattern for both strains."
+      ],
+      "figure_type": "Figure",
+      "region_bb": [131, 69, 342, 180],
+      "caption_bb": [32.0, 282.0, 475.0, 17.0],
+      "page": 3,
+      "page_height": 793
+    },
+    {
+      "page_width": 595,
+      "caption_text": [
+        "Fig. 3. Bio\ufb01lm detection assay of P. aeruginosa shows signi\ufb01cant decline in bio\ufb01lm",
+        "formation from P. aeruginosa PAO1 wild type strain and the OprF mutant strain. The",
+        "error bars represent the mean \u00b1 standard error. (n = 6, *P < 0.01)."
+      ],
+      "figure_type": "Figure",
+      "region_bb": [333, 320, 209, 126],
+      "caption_bb": [301.0, 467.0, 230.0, 25.0],
+      "page": 3,
+      "page_height": 793
+    },
+    {
+      "page_width": 595,
+      "caption_text": [
+        "Fig. 2. SDS PAGE Coomassie blue stained comparing P. aeruginosa PAO1 and OprF",
+        "mutant strain for OprF detection. OprF porin protein size 37 kDa shown in P.",
+        "aeruginosa wild strain whole cell content and missing in the OprF mutant strain."
+      ],
+      "figure_type": "Figure",
+      "region_bb": [75, 390, 199, 146],
+      "caption_bb": [32.0, 546.0, 222.0, 25.0],
+      "page": 3,
+      "page_height": 793
+    }
+  ],
+  "fig_no": 5
+}
